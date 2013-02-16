@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>하루프레스의 기본 데이터 규약 |  하루프레스(Haroopress)</title>
+    <meta name="description" content="하루프레스는 개발자를 위한 블로그 엔진으로 웹서버와 데이터 베이스가 필요없이 마크다운(Markdown)으로 포스팅만하면 정적 페이지 방식으로 블로그를 자동으로 생성해줍니다.">
+    <meta name="author" content="Rhio Kim">
+    <meta name="keywords" content="haroopress,node.js,blog,wordpress,octopress" />
+    <meta name="generator" content="haroopress v0.9.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="/rss.xml" rel="alternate" title="하루프레스(Haroopress)" type="application/rss+xml">
+
+    <!-- Le styles -->
+    <link rel="canonical" href="http://haroopress.com">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/markdown.css" rel="stylesheet">
+    <link href="/css/haroopress.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <link href="/css/code/default.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-64.png">
+
+    <!-- Le javascript -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/apps/github.js"></script>
+    <script src="/js/apps/twitter.js"></script>
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+</head>
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+        <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+
+          <a class="pull-right" href="/rss.xml" onclick="_gaq.push(['_trackEvent', 'header', 'rss'])"><span class="icon-rss"></span></a>
+          
+
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li>
+                <a href="/" onclick="_gaq.push(['_trackEvent', 'header', 'home'])">Home</a>
+              </li>
+              <li>
+                <a href="/archives" onclick="_gaq.push(['_trackEvent', 'header', 'archives'])">Archives</a>
+              </li>
+              <li>
+                <a href="/slides" onclick="_gaq.push(['_trackEvent', 'header', 'slides'])">Slides</a>
+              </li>
+                
+                    <li>
+                      <a href="/about/" onclick="_gaq.push(['_trackEvent', 'header', '/about/'])">About</a>
+                    </li>
+                
+                    <li>
+                      <a href="/book/" onclick="_gaq.push(['_trackEvent', 'header', '/book/'])">Book</a>
+                    </li>
+                
+                    <li>
+                      <a href="/communities/" onclick="_gaq.push(['_trackEvent', 'header', '/communities/'])">커뮤니티</a>
+                    </li>
+                
+                    <li>
+                      <a href="/tutorial/" onclick="_gaq.push(['_trackEvent', 'header', '/tutorial/'])">튜토리얼</a>
+                    </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+<link href="/css/code/default.css" rel="stylesheet">
+<div class="container page-archive">
+    <div class="row">
+        <div class="span3">
+            <div id="author" class="well">
+                <div>
+                    <h3>About Author</h3>
+                    <ul class="thumbnails">
+                        <li>
+                            <a class="thumbnail">
+                                <img src="http://www.gravatar.com/avatar/0764d73c228492e36b339d8b6d7293ad?r=pg&amp;s=128.jpg&amp;d=identicon" />
+                            </a>
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>Rhio Kim</strong><br/>
+                        blog: <a href="http://rhio.tistory.com" target="_blank">http://rhio.tistory.com</a><br/>
+                        twitter: <a href="http://twitter.com/rhiokim" target="_blank">@rhiokim</a><br/>
+                        github: <a href="https://github.com/rhiokim" target="_blank">rhiokim</a>
+                    </p>
+                    <p>
+                        <a href="https://twitter.com/rhiokim" class="twitter-follow-button" data-show-count="true">Follow @rhiokim</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                    </p>
+                    <p>
+                        <p>자바스크립트를 좋아하는 인간입니다. </p>
+<ul>
+<li>Arduino</li>
+<li>Node.js</li>
+<li>HCI</li>
+</ul>
+
+                    </p>
+                </div>
+                <div>
+                    <h3>About this Article</h3>
+                    <p>
+                        <h5>Date Released:</h5>
+                        <span>Monday, May 21 2012 6:06 PM</span>
+                    </p>
+                </div>
+            </div>
+                        <div class="well">
+                <ul class="nav nav-list">
+                    <li class="nav-header">Categories</li>
+                    <li class=""><a href="/category"><i class="icon-home"></i> Home</a></li>
+                    
+                    <li><a href="/category/haroopress"><i class="icon-book"></i> haroopress</a></li>
+                    
+                    <li><a href="/category/release"><i class="icon-book"></i> release</a></li>
+                    
+                    <li><a href="/category/tutorial"><i class="icon-book"></i> tutorial</a></li>
+                    
+                    <li><a href="/category/diary"><i class="icon-book"></i> diary</a></li>
+                    
+                </ul>
+            </div>
+
+            
+<div class="well">
+    <ul class="nav nav-list">
+        <li class="nav-header">Recent Articles</li>
+    
+        <li>
+            <a href="/post/2013-haroopress-plan" target="_blank">2013 하루프레스 계획
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+        <li>
+            <a href="/post/haroopress-v0-dot-9-2-release" target="_blank">하루프레스 v0.9.2 회고 및 릴리즈 노트
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+        <li>
+            <a href="/post/haroopress-install-requirements" target="_blank">하루프레스 설치 요구 사항 및 설치
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+        <li>
+            <a href="/post/haroopress-in-playnode-conference-2012" target="_blank">하루프레스 in #playnode conference 2012
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+        <li>
+            <a href="/post/support-plugins" target="_blank">하루프레스 확장 마크다운
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+    </ul>
+</div>
+
+        </div>
+        <div class="span9">
+            <div class="row">
+                <div class="span9">
+                    <div class="well bg">
+                        
+                        <div class="page-header">
+                            <h1>하루프레스의 기본 데이터 규약</h1>
+                        </div>
+
+                        <div class="pull-right social-area">
+                            
+                            
+
+                            
+                        </div>
+
+                        <div class="markdown-wrapper">
+                            <p>이 문서는 하루프레스를 이용하기 위한 블로그 글, 페이지, 작성자 정보등을 다루기 위한 데이터 포맷에 대해 정의합니다.
+cli 명령을 제공하기 때문에 헤더 정보를 직접 생성하는 경우는 거의 없으나 상황에 따라 수정 편집해야 하는 경우가 발생하기 때문에
+기본 포맷의 구조에 대해서 <strong>꼭</strong> 알아두는게 좋습니다.</p>
+<h3 id="toc_26">데이터 포맷 소개</h3>
+<p>하루프레스의 사용자 생성 데이터는 모두 <strong>JSON</strong> 과 <strong>Markdown</strong> 으로만 이루어집니다.</p>
+<h4 id="toc_27">포스팅</h4>
+<p>블로그 포스팅 데이터는 두 가지로 분리됩니다.</p><pre><code class=""><span class="rules">{
+  <span class="rule">헤더
+}</span></span>
+
+내용
+</code></pre>
+<h5 id="toc_28">포스팅 기본 포맷</h5>
+<pre><code class="js">{
+    <span class="string">"title"</span>: <span class="string">"하루프레스 데이터 포맷 소개"</span>,    <span class="regexp">//</span>블로그 제목
+    <span class="string">"author"</span>: <span class="string">"Rhio kim"</span>,                  <span class="regexp">//</span>작성자
+    <span class="string">"date"</span>: <span class="string">"2012-05-14T04:33:48.267Z"</span>,    <span class="regexp">//</span>작성 시간
+    <span class="string">"categories"</span>: [                        <span class="regexp">//</span>카테고리
+        <span class="string">"튜토리얼"</span> 
+    ],
+    <span class="string">"tags"</span>: [],                            <span class="regexp">//</span>태그
+    <span class="string">"acceptComment"</span>: <span class="literal">true</span>,                 <span class="regexp">//</span>댓글 설정(disqus)
+    <span class="string">"acceptTrackback"</span>: <span class="literal">true</span>,               <span class="regexp">//</span>트랙백 설정
+    <span class="string">"published"</span>: <span class="string">"2012-05-14T04:33:48.267Z"</span>,    <span class="regexp">//</span>공개된 날짜
+    <span class="string">"status"</span>: <span class="string">"publish"</span>,                         <span class="regexp">//</span>공개 상태 설정(publish <span class="keyword">or</span> draft)
+    <span class="string">"important"</span>: <span class="literal">false</span>,                         <span class="regexp">//</span>중요 리본 설정
+    <span class="string">"advanced"</span>: {}                              <span class="regexp">//</span>기타 고급 설정
+}
+
+<span class="regexp">//</span>여기부터는 내용 영역
+...
+</code></pre>
+<h4 id="toc_29">페이지</h4>
+<p>블로그 페이지 데이터는 포스팅과 동일하게 두가지로 분리됩니다.</p><pre><code class=""><span class="rules">{
+  <span class="rule">헤더
+}</span></span>
+
+내용
+</code></pre>
+<h5 id="toc_30">포스팅 기본 포맷</h5>
+<pre><code class="js">{
+    <span class="string">"title"</span>: <span class="string">"하루프레스 데이터 포맷 소개"</span>,    <span class="regexp">//</span>블로그 제목
+    <span class="string">"author"</span>: <span class="string">"Rhio kim"</span>,                  <span class="regexp">//</span>작성자
+    <span class="string">"date"</span>: <span class="string">"2012-05-14T04:33:48.267Z"</span>,    <span class="regexp">//</span>작성 시간
+    <span class="string">"categories"</span>: [                        <span class="regexp">//</span>카테고리
+        <span class="string">"튜토리얼"</span> 
+    ],
+    <span class="string">"tags"</span>: [],                            <span class="regexp">//</span>태그
+    <span class="string">"acceptComment"</span>: <span class="literal">true</span>,                 <span class="regexp">//</span>댓글 설정(disqus)
+    <span class="string">"acceptTrackback"</span>: <span class="literal">true</span>,               <span class="regexp">//</span>트랙백 설정
+    <span class="string">"published"</span>: <span class="string">"2012-05-14T04:33:48.267Z"</span>,    <span class="regexp">//</span>공개된 날짜
+    <span class="string">"status"</span>: <span class="string">"publish"</span>,                         <span class="regexp">//</span>공개 상태 설정(publish <span class="keyword">or</span> draft)
+    <span class="string">"important"</span>: <span class="literal">false</span>,                         <span class="regexp">//</span>중요 리본 설정
+    <span class="string">"advanced"</span>: {                               <span class="regexp">//</span>기타 고급 설정
+        <span class="string">"layout"</span>: <span class="string">"page"</span>                        <span class="regexp">//</span>
+     }                              
+}
+
+<span class="regexp">//</span>여기부터는 내용 영역
+...
+</code></pre>
+<h4 id="toc_31">작성자</h4>
+<p>작성자의 경우 포스팅이나 페이지의 헤더 영역의 저작자(author) 필드와 파일명이 매칭이 되기 때문에 파일명은 굉장히 중요합니다.</p><pre><code class="js">{
+ <span class="keyword">...</span>,
+ <span class="string">"author"</span>: <span class="string">"Rhio kim"</span>,
+ <span class="keyword">...</span>
+}
+
+내용
+</code></pre><p>포스팅의 헤더가 다음과 같을때 파일명은 파일명 : <code>Rhio kim.markdown</code> 으로 다음과 같이 지정된 경로(<code>/path/to/haroopress/source/data/authors/Rhio kim.markdown</code>)에 작성자 markdown 이 존재해야 합니다.</p><pre><code class="js"><span class="rules">{
+  <span class="rule">헤더
+}</span></span>
+
+내용
+</code></pre>
+<h5 id="toc_32">포스팅 기본 포맷</h5>
+<pre><code class="js">{
+    <span class="string">"name"</span>: <span class="string">"작성자 이름"</span>,
+    <span class="string">"blog"</span>: <span class="string">"http://haroopress.github.com"</span>,
+    <span class="string">"twitter"</span>: <span class="string">"haroopress"</span>,
+    <span class="string">"github"</span>: <span class="string">"haroopress"</span>,
+    <span class="string">"vimeo"</span>: <span class="string">"haroopress"</span>,
+    <span class="string">"youtube"</span>: <span class="string">"haroopress"</span>,
+    <span class="string">"facebook"</span>: <span class="string">"haroopress"</span>,
+    <span class="string">"linkedin"</span>: <span class="string">""</span>,
+    <span class="string">"email"</span>: <span class="string">"rhio.kim@gmail.com"</span>
+}
+
+//여기부터는 소개 내용을 markdown 포맷으로 입력하세요.
+<span class="comment"># Header 1</span>
+헤더 <span class="number">1</span> 내용
+
+<span class="comment">## Header 2</span>
+헤더 <span class="number">2</span> 내용
+
+[링크](http://haroopress.github.com)
+<span class="keyword">...</span>
+</code></pre>
+                        </div>
+                        <hr />
+                                            
+                        <div class="row-fluid">
+                            
+                            <div class="pull-right">
+                                <a href="/post/haroopress-deploy-to-github" class="btn btn-info">블로그 깃허브(Github)로 배포하기 <i class="icon-white icon-chevron-right"></i></a>
+                            </div>
+                            
+
+                            
+                            <div class="pull-left">
+                                <a href="/post/fenced-code-block" class="btn btn-info"><i class="icon-white icon-chevron-left"></i> 구문 강조를 위한 펜스 코드 블럭(fenced code block)</a>
+                            </div>
+                            
+                        </div>
+                    
+
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+        </div>
+    </div>
+    <!--<div class="row">-->
+        <!--<div class="offset3 span9">-->
+            <!--<strong>tags</strong> :-->
+            <!---->
+        <!--</div>-->
+    <!--</div>-->
+</div><!-- /container -->
+
+
+        <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span12 ">
+                    <div class="well">
+                        <p class="pull-right"><a href="#">Back to top</a></p>
+                            <strong>haroopress</strong> developed by <a href="http://twitter.com/rhiokim" target="_blank">@rhiokim</a>,<a href="http://twitter.com/haroopress" target="_blank">@haroopress</a> and source in <a href="https://github.com/rhiokim/haroopress" target="_blank">github</a><br/>
+                            Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.<br />
+                            Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+
+
+</body>
+</html>

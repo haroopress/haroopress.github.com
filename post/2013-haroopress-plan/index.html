@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>2013 하루프레스 계획 |  하루프레스(Haroopress)</title>
+    <meta name="description" content="하루프레스는 개발자를 위한 블로그 엔진으로 웹서버와 데이터 베이스가 필요없이 마크다운(Markdown)으로 포스팅만하면 정적 페이지 방식으로 블로그를 자동으로 생성해줍니다.">
+    <meta name="author" content="Rhio Kim">
+    <meta name="keywords" content="haroopress,node.js,blog,wordpress,octopress" />
+    <meta name="generator" content="haroopress v0.9.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="/rss.xml" rel="alternate" title="하루프레스(Haroopress)" type="application/rss+xml">
+
+    <!-- Le styles -->
+    <link rel="canonical" href="http://haroopress.com">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/markdown.css" rel="stylesheet">
+    <link href="/css/haroopress.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <link href="/css/code/default.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-64.png">
+
+    <!-- Le javascript -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/apps/github.js"></script>
+    <script src="/js/apps/twitter.js"></script>
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+</head>
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+        <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+
+          <a class="pull-right" href="/rss.xml" onclick="_gaq.push(['_trackEvent', 'header', 'rss'])"><span class="icon-rss"></span></a>
+          
+
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li>
+                <a href="/" onclick="_gaq.push(['_trackEvent', 'header', 'home'])">Home</a>
+              </li>
+              <li>
+                <a href="/archives" onclick="_gaq.push(['_trackEvent', 'header', 'archives'])">Archives</a>
+              </li>
+              <li>
+                <a href="/slides" onclick="_gaq.push(['_trackEvent', 'header', 'slides'])">Slides</a>
+              </li>
+                
+                    <li>
+                      <a href="/about/" onclick="_gaq.push(['_trackEvent', 'header', '/about/'])">About</a>
+                    </li>
+                
+                    <li>
+                      <a href="/book/" onclick="_gaq.push(['_trackEvent', 'header', '/book/'])">Book</a>
+                    </li>
+                
+                    <li>
+                      <a href="/communities/" onclick="_gaq.push(['_trackEvent', 'header', '/communities/'])">커뮤니티</a>
+                    </li>
+                
+                    <li>
+                      <a href="/tutorial/" onclick="_gaq.push(['_trackEvent', 'header', '/tutorial/'])">튜토리얼</a>
+                    </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+<link href="/css/code/default.css" rel="stylesheet">
+<div class="container page-archive">
+    <div class="row">
+        <div class="span3">
+            <div id="author" class="well">
+                <div>
+                    <h3>About Author</h3>
+                    <ul class="thumbnails">
+                        <li>
+                            <a class="thumbnail">
+                                <img src="http://www.gravatar.com/avatar/0764d73c228492e36b339d8b6d7293ad?r=pg&amp;s=128.jpg&amp;d=identicon" />
+                            </a>
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>Rhio Kim</strong><br/>
+                        blog: <a href="http://rhio.tistory.com" target="_blank">http://rhio.tistory.com</a><br/>
+                        twitter: <a href="http://twitter.com/rhiokim" target="_blank">@rhiokim</a><br/>
+                        github: <a href="https://github.com/rhiokim" target="_blank">rhiokim</a>
+                    </p>
+                    <p>
+                        <a href="https://twitter.com/rhiokim" class="twitter-follow-button" data-show-count="true">Follow @rhiokim</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                    </p>
+                    <p>
+                        <p>자바스크립트를 좋아하는 인간입니다. </p>
+<ul>
+<li>Arduino</li>
+<li>Node.js</li>
+<li>HCI</li>
+</ul>
+
+                    </p>
+                </div>
+                <div>
+                    <h3>About this Article</h3>
+                    <p>
+                        <h5>Date Released:</h5>
+                        <span>Tuesday, January 15 2013 11:15 PM</span>
+                    </p>
+                </div>
+            </div>
+                        <div class="well">
+                <ul class="nav nav-list">
+                    <li class="nav-header">Categories</li>
+                    <li class=""><a href="/category"><i class="icon-home"></i> Home</a></li>
+                    
+                    <li><a href="/category/haroopress"><i class="icon-book"></i> haroopress</a></li>
+                    
+                    <li><a href="/category/release"><i class="icon-book"></i> release</a></li>
+                    
+                    <li><a href="/category/tutorial"><i class="icon-book"></i> tutorial</a></li>
+                    
+                    <li><a href="/category/diary"><i class="icon-book"></i> diary</a></li>
+                    
+                </ul>
+            </div>
+
+            
+<div class="well">
+    <ul class="nav nav-list">
+        <li class="nav-header">Recent Articles</li>
+    
+        <li>
+            <a href="/post/2013-haroopress-plan" target="_blank">2013 하루프레스 계획
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+        <li>
+            <a href="/post/haroopress-v0-dot-9-2-release" target="_blank">하루프레스 v0.9.2 회고 및 릴리즈 노트
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+        <li>
+            <a href="/post/haroopress-install-requirements" target="_blank">하루프레스 설치 요구 사항 및 설치
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+        <li>
+            <a href="/post/haroopress-in-playnode-conference-2012" target="_blank">하루프레스 in #playnode conference 2012
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+        <li>
+            <a href="/post/support-plugins" target="_blank">하루프레스 확장 마크다운
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+    </ul>
+</div>
+
+        </div>
+        <div class="span9">
+            <div class="row">
+                <div class="span9">
+                    <div class="well bg">
+                        <div class="pull-right bookmark"></div>
+                        <div class="page-header">
+                            <h1>2013 하루프레스 계획</h1>
+                        </div>
+
+                        <div class="pull-right social-area">
+                            
+                            
+
+                            
+                        </div>
+
+                        <div class="markdown-wrapper">
+                            <p><img src="./@img/haroopress.png" alt="image"></p><p>하루프레스의 2012년은 약 6개월에 걸쳐 개인의 욕구에 의해 만들어진 정적 블로그 엔진이였습니다. </p><p>개인의 오픈 소스 프로젝트를 널리 알릴 수 있는 기회를 마련해주신 분들에게 감사를 드립니다.</p><p>마크다운과 노드(Node.js)가 너무 좋았고 위지윅 방식의 포스팅이 너무 싫었습니다.  </p><p>그래서 시작했습니다. 
+옥토프레스가 있었지만 루비였고 블로그 도구를 커스터마이징 하기 위해서 새로운 프로그래밍 언어를 배우는 것은 개인적으로 무의미했습니다.</p><p>그렇게 6개월 동안 너무 즐겁게 만들었습니다. </p><p>많은 분들이 하루프레스를 사용해주시고 많은 피드백을 보내와 주셨습니다. 
+뿐만 아니라 컨퍼런스와 모임을 통해서 하루프레스를 공유할 수 있는 기회를 만들어 주셨습니다. </p><p>모든 분들께 감사드립니다.</p><p>이렇게 v0.9.x 까지 출시된 하루프레스는 지난 한해 정적 블로그 엔진으로써 기본적인 모습을 갖춰 갔고 또한 공개되지 않은 많은 아이디어가 수집되었고 가능성을 테스트하는 한해였습니다.</p>
+<h3 id="toc_0">하루프레스 비젼</h3>
+<p>하루프레스의 철학은 변하지 않습니다. </p><p><strong>블로그가 필요한 사람이 아니라 콘텐츠를 작성하기 위해 불필요한 일들을 간소화 하려고합니다.</strong> 
+그리고 모든 환경에서 동일한 경험으로 콘텐츠를 퍼블리싱할 수 있습니다.  </p><p>하루프레스를 사용하는 여러분은 생각과 유입되는 모든 정보들의 기록을 마크다운으로 작성하면 됩니다.<br>
+<img src="./@img/pieces.png" class="pull-right"/> 그 콘텐츠가 신문기자의 기사가 되거나 음악가의 악보가 되거나 건축가의 설계사가 되거나 강연자의 프리젠테이션이 되는 것은 하루프레스가 해줄 것입니다. </p><p>더불어 아래와 같은 두가지 생각을 추가할 예정입니다.</p>
+<ul>
+<li>사용자 콘텐츠 에코 시스템 &amp; 마켓 시스템</li>
+<li>콘텐츠를 기반으로 한 웹 애플리케이션 메니지먼트 시스템</li>
+</ul>
+
+<h3 id="toc_1">하루프레스 1.0 는 어떤 모습일까?</h3>
+
+<ul>
+<li>마크다운 프리젠테이션 안정화</li>
+<li>하루프레스 크로스 플랫폼 (supported Linux, Mac 10.8)</li>
+<li>누구나가 손쉽게 테마를 만들 수 있도록 템플릿(테마) 고도화</li>
+<li>사용자 플러그인 고도화</li>
+<li>하이브리드 콘텐츠 퍼블리셔</li>
+<li>인스턴트 마크다운 에디터</li>
+<li>GUI 방식의 하루프레스 관리도구</li>
+<li>비밀 기능 1</li>
+<li>비밀 기능 2</li>
+</ul>
+<p>하루프레스의 1.0 은 꾀 멀리 있습니다. 
+제품으로써 믿고 쓸만하다는 것은 버그가 없이 제대로 동작한다는 것을 보장해야 하는데 사실 그건 1.0까지는 장담하고 싶지가 않습니다. (이건 또 뭔 강아지 소리인가?)</p><p>물론 최소한의 안정화를 위해 노력은 하고 있지만 목표를 넘어서 과한 안정화보다 1.0 의 모습으로 빨리 달려가는게 하루프레스의 목표중에도 하나 입니다.</p><p>이유라면 현 시점에서 하루프레스와 유사한 도구들이 굉장히 많이 쏟아졌고 대체할 수 있는 상품이 많아 졌습니다. 
+하지만 여전히 하루프레스가 같은 몇가지 장점이 있고 더불어 1.0 에서 기대하고 있는 것은 컨텐츠 관리 시스템의 변화의 필요성과 웹의 가능성 그리고 노드 기반의 좋은 사례를 만들고 싶은 개발자로써의 욕심이기 때문입니다.</p><p>컨트리뷰터가 늘어나면 또 이야기는 달라지겠죠? <sup>_^</sup></p>
+<h3 id="toc_2">하루프레스 2013</h3>
+<p><img src="./@img/tumblr_me9yyhjgJK1qf4gr0o1_500_large.gif" alt="image"></p><p>2013년은 이미 시작되었고 연초에 예정된 회사 업무와 개인적인 업무로 인해 리프레쉬 기간을 조금 두었고 이제 다시 달릴 준비가 거의 완료되었습니다.</p><p>쉬는 동안에도 템플릿 고도화에 대한 전략과 크로스 플랫폼 지원을 위한 빌드 테스트, 인스턴트 마크다운 에디터와 GUI 방식의 관리도구를 위한 구조 설계와 코드 테스팅은 완료한 상태입니다.</p><p>올 한해도 열심히 달리겠습니다. 국내 최고의, 세계 최고의 그런 수식어가 필요한 하루프레스가 되고 싶지는 않습니다. 그냥 개발자에게 익숙하고 일반인에게도 익숙해질 마크다운 포맷으로 손쉽게 기록하고 그것을 원하는 형태로 표현할 수 있는 도구로 만들어 보렵니다.</p>
+                        </div>
+                        <hr />
+                                            
+                        <div class="row-fluid">
+                            
+                            <div class="pull-right">
+                                <a href="/post/changelog-v0-dot-8-0" class="btn btn-info">changelog-v0.8.0 <i class="icon-white icon-chevron-right"></i></a>
+                            </div>
+                            
+
+                            
+                        </div>
+                    
+
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+        </div>
+    </div>
+    <!--<div class="row">-->
+        <!--<div class="offset3 span9">-->
+            <!--<strong>tags</strong> :-->
+            <!---->
+        <!--</div>-->
+    <!--</div>-->
+</div><!-- /container -->
+
+
+        <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span12 ">
+                    <div class="well">
+                        <p class="pull-right"><a href="#">Back to top</a></p>
+                            <strong>haroopress</strong> developed by <a href="http://twitter.com/rhiokim" target="_blank">@rhiokim</a>,<a href="http://twitter.com/haroopress" target="_blank">@haroopress</a> and source in <a href="https://github.com/rhiokim/haroopress" target="_blank">github</a><br/>
+                            Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.<br />
+                            Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+
+
+</body>
+</html>

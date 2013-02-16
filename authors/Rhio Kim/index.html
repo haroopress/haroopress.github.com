@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Rhio Kim's articles |  하루프레스(Haroopress)</title>
+    <meta name="description" content="하루프레스는 개발자를 위한 블로그 엔진으로 웹서버와 데이터 베이스가 필요없이 마크다운(Markdown)으로 포스팅만하면 정적 페이지 방식으로 블로그를 자동으로 생성해줍니다.">
+    <meta name="author" content="Rhio Kim">
+    <meta name="keywords" content="haroopress,node.js,blog,wordpress,octopress" />
+    <meta name="generator" content="haroopress v0.9.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="/rss.xml" rel="alternate" title="하루프레스(Haroopress)" type="application/rss+xml">
+
+    <!-- Le styles -->
+    <link rel="canonical" href="http://haroopress.com">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/markdown.css" rel="stylesheet">
+    <link href="/css/haroopress.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <link href="/css/code/default.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-64.png">
+
+    <!-- Le javascript -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/apps/github.js"></script>
+    <script src="/js/apps/twitter.js"></script>
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+</head>
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+        <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+
+          <a class="pull-right" href="/rss.xml" onclick="_gaq.push(['_trackEvent', 'header', 'rss'])"><span class="icon-rss"></span></a>
+          
+
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li>
+                <a href="/" onclick="_gaq.push(['_trackEvent', 'header', 'home'])">Home</a>
+              </li>
+              <li>
+                <a href="/archives" onclick="_gaq.push(['_trackEvent', 'header', 'archives'])">Archives</a>
+              </li>
+              <li>
+                <a href="/slides" onclick="_gaq.push(['_trackEvent', 'header', 'slides'])">Slides</a>
+              </li>
+                
+                    <li>
+                      <a href="/about/" onclick="_gaq.push(['_trackEvent', 'header', '/about/'])">About</a>
+                    </li>
+                
+                    <li>
+                      <a href="/book/" onclick="_gaq.push(['_trackEvent', 'header', '/book/'])">Book</a>
+                    </li>
+                
+                    <li>
+                      <a href="/communities/" onclick="_gaq.push(['_trackEvent', 'header', '/communities/'])">커뮤니티</a>
+                    </li>
+                
+                    <li>
+                      <a href="/tutorial/" onclick="_gaq.push(['_trackEvent', 'header', '/tutorial/'])">튜토리얼</a>
+                    </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container page-author">
+    <div class="row">
+        <div class="span3">
+			    
+    <div class="well contributors">
+		<div class="pull-right">
+			<a href="/authors"><i class=" icon-info-sign"></i></a>
+		</div>
+        <h6>contributors</h6>
+        
+        <div class="row-fluid">
+            <a class="pull-left" href="/authors/haroopress" title="undefined">
+				<img src="http://www.gravatar.com/avatar/a8618a255192bd842fdd62d099776735?r=pg&amp;s=128.jpg&amp;d=identicon" />
+			</a>
+            <p>
+                <strong>haroopress</strong><br/>
+                <a href="https://twitter.com//haroopress" target="_blank">@haroopress</a>
+            </p>
+        </div>
+        <hr>
+        
+        <div class="row-fluid">
+            <a class="pull-left" href="/authors/Rhio Kim" title="undefined">
+				<img src="http://www.gravatar.com/avatar/0764d73c228492e36b339d8b6d7293ad?r=pg&amp;s=128.jpg&amp;d=identicon" />
+			</a>
+            <p>
+                <strong>Rhio Kim</strong><br/>
+                <a href="https://twitter.com//rhiokim" target="_blank">@rhiokim</a>
+            </p>
+        </div>
+        <hr>
+        
+    </div>
+    
+			            <div class="well">
+                <ul class="nav nav-list">
+                    <li class="nav-header">Categories</li>
+                    <li class=""><a href="/category"><i class="icon-home"></i> Home</a></li>
+                    
+                    <li><a href="/category/haroopress"><i class="icon-book"></i> haroopress</a></li>
+                    
+                    <li><a href="/category/release"><i class="icon-book"></i> release</a></li>
+                    
+                    <li><a href="/category/tutorial"><i class="icon-book"></i> tutorial</a></li>
+                    
+                    <li><a href="/category/diary"><i class="icon-book"></i> diary</a></li>
+                    
+                </ul>
+            </div>
+
+        </div>
+        <div class="span9">
+            <div class="well bg">
+                <div class="pull-right">
+                    <ul class="thumbnails">
+                        <li class="thumbnail">
+                            <a>
+                                <img src="http://www.gravatar.com/avatar/0764d73c228492e36b339d8b6d7293ad?r=pg&amp;s=128.jpg&amp;d=identicon" width="48"/>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="page-header">
+                    <h1>Rhio Kim's Articles
+                    </h1>
+                </div>
+                <div class="row">
+                    <div class="span8">
+                        <ul>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/2013-haroopress-plan">2013 하루프레스 계획</a> <small>at Tuesday, January 15 2013 11:15 PM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/changelog-v0-dot-8-0">changelog-v0.8.0</a> <small>at Sunday, April 22 2012 1:41 PM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/changelog-v0-dot-8-5">changelog v0.8.5</a> <small>at Monday, July 16 2012 5:18 PM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/fenced-code-block">구문 강조를 위한 펜스 코드 블럭(fenced code block)</a> <small>at Thursday, October 18 2012 3:08 AM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/haroopress-default-data-format">하루프레스의 기본 데이터 규약</a> <small>at Monday, May 21 2012 6:06 PM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/haroopress-deploy-to-github">블로그 깃허브(Github)로 배포하기</a> <small>at Thursday, July 12 2012 11:55 AM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/haroopress-in-playnode-conference-2012">하루프레스 in #playnode conference 2012</a> <small>at Thursday, November 22 2012 11:13 PM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/haroopress-install-guide-movie">5분만에 설치하는 하루프레스 동영상</a> <small>at Friday, June 22 2012 4:30 PM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/haroopress-install-requirements">하루프레스 설치 요구 사항 및 설치</a> <small>at Friday, November 30 2012 1:33 AM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/haroopress-migrate-from-octopress">옥토프레스 데이터 마이그레이션</a> <small>at Wednesday, July 18 2012 6:03 PM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/haroopress-posting-guide">하루프레스 포스팅 가이드</a> <small>at Friday, June 22 2012 5:38 PM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/haroopress-quick-guide">하루프레스 퀵 가이드</a> <small>at Monday, May 21 2012 2:36 PM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/haroopress-similar-services">하루프레스를 닮은 서비스</a> <small>at Sunday, September 16 2012 11:21 AM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/haroopress-update-my-profile">하루프레스 저작자 프로파일 수정하기</a> <small>at Saturday, September 22 2012 5:13 PM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/haroopress-v0-dot-8-4-hoego">하루프레스 v0.8.4 회고</a> <small>at Tuesday, July 17 2012 5:20 PM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/haroopress-v0-dot-9">하루프레스 v0.9 를 소개합니다.</a> <small>at Saturday, October 6 2012 9:21 PM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/haroopress-v0-dot-9-0-release">하루프레스 v0.9.0 회고</a> <small>at Tuesday, October 16 2012 2:00 AM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/haroopress-v0-dot-9-1-release">하루프레스 v0.9.1 회고 및 릴리즈 노트</a> <small>at Saturday, November 17 2012 2:09 PM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/haroopress-v0-dot-9-2-release">하루프레스 v0.9.2 회고 및 릴리즈 노트</a> <small>at Sunday, December 2 2012 6:35 PM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/haroopress-v0.8.2-retrospectives">하루프레스 v0.8.2 회고</a> <small>at Thursday, May 17 2012 6:32 PM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/haroopress-v0.8.3-retrospectives">하루프레스 v0.8.3 회고</a> <small>at Thursday, May 17 2012 11:50 PM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/haroopress-with-frends">하루프레스 소개 프리젠테이션 in FRENDS</a> <small>at Tuesday, July 10 2012 4:43 PM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/harupeureseu-gaebal-rodeumaeb">하루프레스 개발 로드맵</a> <small>at Thursday, April 26 2012 7:59 PM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/harupeureseu-hwangyeongseoljeong-hagi">하루프레스 환경설정 하기</a> <small>at Saturday, April 21 2012 1:50 PM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/harupeureseu-myeongryeongjul-dogu-dijain">하루프레스  명령줄 도구 디자인</a> <small>at Saturday, April 28 2012 11:16 AM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/harupeureseuneun-mueosinga">하루프레스는 무엇인가</a> <small>at Wednesday, April 18 2012 1:49 PM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/opensource-with-haroopress">하루프레스에 포함된 오픈소스들</a> <small>at Wednesday, June 13 2012 10:31 AM</small>
+                                </h3>
+                            </li>
+                    
+                            <li>
+                                <h3>
+                                    <a href="/post/support-plugins">하루프레스 확장 마크다운</a> <small>at Saturday, November 17 2012 3:47 PM</small>
+                                </h3>
+                            </li>
+                    
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- /container -->
+
+
+        <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span12 ">
+                    <div class="well">
+                        <p class="pull-right"><a href="#">Back to top</a></p>
+                            <strong>haroopress</strong> developed by <a href="http://twitter.com/rhiokim" target="_blank">@rhiokim</a>,<a href="http://twitter.com/haroopress" target="_blank">@haroopress</a> and source in <a href="https://github.com/rhiokim/haroopress" target="_blank">github</a><br/>
+                            Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.<br />
+                            Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+
+
+</body>
+</html>

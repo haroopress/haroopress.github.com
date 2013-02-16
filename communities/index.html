@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>커뮤니티 하루프레스(Haroopress)</title>
+    <meta name="description" content="하루프레스는 개발자를 위한 블로그 엔진으로 웹서버와 데이터 베이스가 필요없이 마크다운(Markdown)으로 포스팅만하면 정적 페이지 방식으로 블로그를 자동으로 생성해줍니다.">
+    <meta name="author" content="Rhio Kim">
+    <meta name="keywords" content="haroopress,node.js,blog,wordpress,octopress" />
+    <meta name="generator" content="haroopress v0.9.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="/rss.xml" rel="alternate" title="하루프레스(Haroopress)" type="application/rss+xml">
+
+    <!-- Le styles -->
+    <link rel="canonical" href="http://haroopress.com">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/markdown.css" rel="stylesheet">
+    <link href="/css/prettify.css" rel="stylesheet">
+    <link href="/css/haroopress.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <link href="/css/code/default.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-64.png">
+
+    <!-- Le javascript -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/apps/toc.js"></script>
+</head>
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+        <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+
+          <a class="pull-right" href="/rss.xml" onclick="_gaq.push(['_trackEvent', 'header', 'rss'])"><span class="icon-rss"></span></a>
+          
+
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li>
+                <a href="/" onclick="_gaq.push(['_trackEvent', 'header', 'home'])">Home</a>
+              </li>
+              <li>
+                <a href="/archives" onclick="_gaq.push(['_trackEvent', 'header', 'archives'])">Archives</a>
+              </li>
+              <li>
+                <a href="/slides" onclick="_gaq.push(['_trackEvent', 'header', 'slides'])">Slides</a>
+              </li>
+                
+                    <li>
+                      <a href="/about/" onclick="_gaq.push(['_trackEvent', 'header', '/about/'])">About</a>
+                    </li>
+                
+                    <li>
+                      <a href="/book/" onclick="_gaq.push(['_trackEvent', 'header', '/book/'])">Book</a>
+                    </li>
+                
+                    <li>
+                      <a href="/communities/" onclick="_gaq.push(['_trackEvent', 'header', '/communities/'])">커뮤니티</a>
+                    </li>
+                
+                    <li>
+                      <a href="/tutorial/" onclick="_gaq.push(['_trackEvent', 'header', '/tutorial/'])">튜토리얼</a>
+                    </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+<link href="/css/code/default.css" rel="stylesheet">
+
+<div class="container page-page">
+    <div class="row">
+        <div class="span12">
+            <div class="well markdown-wrapper">
+                <ul class="unstyled share pull-right">
+                    <li class="twitter">
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-url="http://haroopress.com/communities/" data-via="rhiokim" data-hashtags="">Tweet</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        <!--a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+                        <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script-->
+                    </li>
+                    <li class="facebook">
+                        <div id="fb-root"></div>
+                        <script>(function(d, s, id) {
+                          var js, fjs = d.getElementsByTagName(s)[0];
+                          if (d.getElementById(id)) {return;}
+                          js = d.createElement(s); js.id = id;
+                          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                          fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));</script>
+                        <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-href="http://haroopress.com/communities/"></div>
+                    </li>
+                    <li class="google">
+                        <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+                        <g:plusone size="medium"></g:plusone>
+                    </li>
+                </ul>
+                <h3 id="toc_261">Friends</h3>
+
+<ul>
+<li><a href="http://nezz.pe.kr/">http://nezz.pe.kr/</a></li>
+<li><a href="http://insanehong.kr/">http://insanehong.kr/</a></li>
+<li><a href="http://4oxmile.github.com/">http://4oxmile.github.com/</a></li>
+<li><a href="http://simonkim.github.com/">http://simonkim.github.com/</a></li>
+<li><a href="http://juhoi.github.com/">http://juhoi.github.com/</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+</div><!-- /container -->
+
+
+        <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span12 ">
+                    <div class="well">
+                        <p class="pull-right"><a href="#">Back to top</a></p>
+                            <strong>haroopress</strong> developed by <a href="http://twitter.com/rhiokim" target="_blank">@rhiokim</a>,<a href="http://twitter.com/haroopress" target="_blank">@haroopress</a> and source in <a href="https://github.com/rhiokim/haroopress" target="_blank">github</a><br/>
+                            Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.<br />
+                            Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // fix sub nav on scroll
+        var $win = $(window)
+          , $nav = $('.subnav')
+          , navTop = $('.subnav').length && $('.subnav').offset().top - 40
+          , isFixed = 0
+
+        processScroll()
+
+        $win.on('scroll', processScroll)
+
+        function processScroll() {
+          var i, scrollTop = $win.scrollTop()
+          if (scrollTop >= navTop && !isFixed) {
+            isFixed = 1
+            $nav.addClass('subnav-fixed')
+          } else if (scrollTop <= navTop && isFixed) {
+            isFixed = 0
+            $nav.removeClass('subnav-fixed')
+          }
+        }
+
+
+    </script>
+    
+
+
+</body>
+</html>

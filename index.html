@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title> 하루프레스(Haroopress)</title>
+    <meta name="description" content="하루프레스는 개발자를 위한 블로그 엔진으로 웹서버와 데이터 베이스가 필요없이 마크다운(Markdown)으로 포스팅만하면 정적 페이지 방식으로 블로그를 자동으로 생성해줍니다.">
+    <meta name="author" content="Rhio Kim">
+    <meta name="keywords" content="haroopress,node.js,blog,wordpress,octopress" />
+    <meta name="generator" content="haroopress v0.9.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="/rss.xml" rel="alternate" title="하루프레스(Haroopress)" type="application/rss+xml">
+
+    <!-- Le styles -->
+    <link rel="canonical" href="http://haroopress.com">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/markdown.css" rel="stylesheet">
+    <link href="/css/haroopress.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <link href="/css/code/default.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-64.png">
+
+    <!-- Le javascript -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/apps/github.js"></script>
+    <script src="/js/apps/twitter.js"></script>
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+</head>
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+        <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+
+          <a class="pull-right" href="/rss.xml" onclick="_gaq.push(['_trackEvent', 'header', 'rss'])"><span class="icon-rss"></span></a>
+          
+
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li>
+                <a href="/" onclick="_gaq.push(['_trackEvent', 'header', 'home'])">Home</a>
+              </li>
+              <li>
+                <a href="/archives" onclick="_gaq.push(['_trackEvent', 'header', 'archives'])">Archives</a>
+              </li>
+              <li>
+                <a href="/slides" onclick="_gaq.push(['_trackEvent', 'header', 'slides'])">Slides</a>
+              </li>
+                
+                    <li>
+                      <a href="/about/" onclick="_gaq.push(['_trackEvent', 'header', '/about/'])">About</a>
+                    </li>
+                
+                    <li>
+                      <a href="/book/" onclick="_gaq.push(['_trackEvent', 'header', '/book/'])">Book</a>
+                    </li>
+                
+                    <li>
+                      <a href="/communities/" onclick="_gaq.push(['_trackEvent', 'header', '/communities/'])">커뮤니티</a>
+                    </li>
+                
+                    <li>
+                      <a href="/tutorial/" onclick="_gaq.push(['_trackEvent', 'header', '/tutorial/'])">튜토리얼</a>
+                    </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+<script src="/js/highlight.pack.js"></script>
+<script>
+hljs.tabReplace = '    ';
+hljs.initHighlightingOnLoad();
+</script>
+
+<link href="/css/code/solarized_light.css" rel="stylesheet">
+
+<header class="intro-head">
+    <div class="inner">
+        <div class="container">
+            <h1>HAROOPRESS [하루프레스]</h1>
+
+            <p class="lead">
+                5분만에 설치하는 블로그 엔진!, 웹 서버와 데이터베이스가 필요 없는 초 간편 컨텐츠 메니징 시스템(CMS)! <br>
+                다양한 테마, 웹 슬라이드, 플러그인, 마크다운 포맷, 데이터 변환 유틸<br>
+            </p>
+
+            <p><strong>알림! :</strong> 하루프레스는 사용자 여러분의 <a href="https://github.com/rhiokim/haroopress/issues" target="blank" onclick="_gaq.push['_trackEvent', 'intro', 'header', 'feedback']">피드백</a>과 후원,기부를 기다립니다.</p>
+        </div>
+        <!-- /container -->
+        <ul class="quick-links">
+            <li>
+                <iframe src="http://ghbtns.com/github-btn.html?user=rhiokim&repo=haroopress&type=watch&count=true"
+      allowtransparency="true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
+            </li>
+            <li>
+                <iframe src="http://ghbtns.com/github-btn.html?user=rhiokim&repo=haroopress&type=fork&count=true"
+      allowtransparency="true" frameborder="0" scrolling="0" width="95px" height="20px"></iframe>
+            </li>
+            <li>
+                <a href="https://twitter.com/haroopress" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">Follow @haroopress</a>
+            </li>
+            <li>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-text="자바스크립트 해커들을 위한 노드 기반의 정적 페이지 블로그 하루프레스 #마크다운 #하루프레스" data-url="http://haroopress.com" data-via="haroopress">Tweet</a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<div class="container page-main">
+    <div class="row-fluid">
+        <div class="span8 download-info" style="text-align:right;">
+            <a href="http://github.com/rhiokim/haroopress" class="btn btn-danger btn-large" onclick="_gaq.push(['_trackEvent', 'intro', 'GitHub Project', 'View project on GitHub']);"><span class="icon-eye-open"></span> View Haroopress on Github</a>
+
+            <!--a href="https://github.com/rhiokim/haroopress/zipball/master" class="btn btn-large" onclick="_gaq.push(['_trackEvent', 'intro actions', 'Download', 'Download 0.9.2']);"><span class="icon-download"></span> Download Haroopress <small>(v0.9.2)</small></a-->
+        </div>
+        <div class="span4 download-info">
+            <img class="pull-left author-img" src="http://www.gravatar.com/avatar/0764d73c228492e36b339d8b6d7293ad?r=pg&s=53.jpg&d=identicon"/>
+            <p>
+                <a href="/post/haroopress-v0-dot-9-2-release/" onclick="_gaq.push(['_trackEvent', 'intro', 'content', 'release-message'])">하루프레스 v0.9.2 버젼이 출시하였습니다.</a><br/> 이번 버젼부터는 Mac OS X 뿐 아니라 리눅스(Ubuntu)에서도 지원합니다. 
+            </p>
+        </div>
+    </div>
+
+    <div class="intro">
+        <div class="row bottom">
+            <div class="span4">
+                <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_042_group.png">-->
+                <h2><span class="icon-bolt"></span> 5분 설치 블로그</h2>
+                <p>복잡한 설치형 블로그는 이제 그만! 설치하는데 걸리는 시간 5분!! <br/><code>git clone https://github.com/rhiokim/haroopress.git</code> <br/>(<a href="/post/haroopress-install-guide-movie">5분만에 설치하는 하루프레스 동영상</a>)</p>
+            </div>
+            <div class="span4">
+                <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_042_group.png">-->
+                <h2><span class="icon-hdd"></span> No!서버, No!데이터베이스</h2>
+                <p>대부분의 블로그 서비스나 엔진은 웹 서버와 데이터베이스가 필요합니다. 하지만 하루프레스 웹 서버도 데이터베이스도 필요 없는 정적 페이지를 기반으로 하는 블로그 엔진입니다. (<a href="http://help.github.com/pages/" target="_blank">Github Pages</a>)</p>
+            </div>
+            <div class="span4">
+                <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_079_podium.png">-->
+                <h2><span class="icon-time"></span> 간편하고 빠른 블로그 엔진</h2>
+                <p>커멘드라인 도구에 익숙하다면 하루프레스를 설치하고 사용하는데 어려움은 전혀 없습니다. (<a href="/post/haroopress-posting-guide">블로그 포스팅</a>, <a href="/post/haroopress-deploy-to-github">발행하기</a>)</p>
+            </div>
+        </div>
+        <div class="row bottom">
+            <div class="span4">
+                <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_163_iphone.png">-->
+                <h2><span class="icon-heart-empty"></span> 스킨(테마) 지원</h2>
+                <p>트위터 부트스트랩을 기반으로 테마 구조가 잡혀있어 개발자스러운 테마를 손 쉽게 적용할 수 있을 뿐아니라 직접 만들 수도 있습니다. (<a href="#theme">테마 목록</a>)</p>
+            </div>
+            <div class="span4">
+                <h2><span class="icon-check-empty"></span> 웹 슬라이드 <em class="label label-info"><strong>experiment</strong></em></h2>
+                <p>간단한 마크다운 문서가 멋진 웹 슬라이드로 재 탄생하게 됩니다. 뿐만아니라 언제 어디서든지 웹을 통한 멋진 프리젠테이션이 가능합니다. (<a href="/slides/hello-world/" target="_blank">예제</a> | <a href="#"><del>작성 가이드</del></a>)</p>
+            </div>
+            <div class="span4">
+                <h2><span class="icon-beaker"></span> 다양한 플러그인</h2>
+                <p>트위터, 페이스북, 구글플러스, 깃허브등의 소셜라이징을 위한 플러그인 뿐만 아니라 하루프레스의 기본 레이아웃 구성요소를 제외한 대부분이 플러그인 아키텍쳐내에서 동작합니다.</p>
+            </div>
+        </div>
+        <div class="row bottom20">
+            <div class="span4">
+                <h2><span class="icon-refresh"></span> 데이터 마이그레이션</h2>
+                <p>Ruby의 Jekyll 기반의 <a href="http://octopress.org" target="_blank">옥토프레스</a> 데이터 마이그레이션을 일부 지원하고 향후 <del>워드프레스</del>, <del>텀블러</del>, <del>티스토리</del> 등도 지원할 예정입니다. (<a href="/post/haroopress-migrate-from-octopress">옥토프레스</a>)</p>
+            </div>
+            <div class="span4">
+                <h2><span class="icon-link"></span> 도메인 연동 지원</h2>
+                <p>본인이 소유한 도메인을 손쉽게 연결할 수 있습니다. (<a href="https://github.com/blog/315-cname-support-for-github-pages" target="_blank">CNAME support for Github Pages</a>)</p>
+            </div>
+            <div class="span4">
+                <h2><span class="icon-cloud"></span> 클라우드 블로깅</h2>
+                <p>Git 유저라면 Github 나 Bitbucket 을 통해서, 일반 유저라면 Dropbox 동기화를 통해서 언제 어디서든지 블로깅을 할 수 있습니다. (<a href="/post/haroopress-dropbox-synchronous/">Dropbox</a>)</p>
+            </div>
+        </div>
+        <div class="row bottom20">
+            <div class="span4">
+                <h2><span class="icon-inbox"></span> 펜스 코드 블럭 <em class="label label"><strong>v0.9</strong></em></h2>
+                <p>개발자는 블로그 포스팅을 하다보면 필수적으로 들어가는 것이 짧은 코드 블럭입니. 마크다운에서는 구문강조가 적용된 예쁜 코드 블럭을 원하는 스타일로 꾸밀 수 있습니다.(<a href="/post/fenced-code-block/">소개</a>)</p>
+            </div>
+            <div class="span4">
+                <h2><span class="icon-tasks"></span> 멀티 마크다운 지원 <em class="label label"><strong>v0.9</strong></em></h2>
+                <p>전형적인 마크다운에 비해 향상된 마크다운을 일부 제공합니다. 테이블, 트리플 강조(Triple Emphasis), 자동 링크등을 제공합니다. (<a href="/post/haroopress-v0-dot-9/" target="_blank">참고</a>)</p>
+            </div>
+            <div class="span4">
+                <h2><span class="icon-magic"></span> 마크다운 플러그인 지원 <em class="label label-important"><strong>v0.9.1</strong></em></h2>
+                <p>마크다운 플러그인 지원 <code>[plugin:value attribute]</code> 를 통해서 다양한 오픈 콘텐츠를 제공합니다. youtube, jsfiddle, tweet 를 간단한 문법으로 글에 포함할 수 있습니다. (<a href="/post/haroopress-v0-dot-9/#toc_74" target="_blank">참고</a>)</p>
+            </div>
+        </div>
+    </div>
+
+    <hr class="soften">
+
+    <div class="marketing">
+        <h1>손쉬운 설치</h1>
+        <p class="marketing-byline">하루프레스 설치 방법에 대해서 소개합니다.</p>
+    </div>
+
+    <div class="howto markdown-wrapper ">
+        <div class="row">
+            <div class="span6">
+                <h2><span class="icon-book"></span> 설치 요구사항</h2>
+                <div class="alert alert-block">
+                    <strong>설치 시 필독 사항!</strong><br />
+                    하루프레스를 설치하기 위해서 필요한 몇가지 <a href="/post/haroopress-install-requirements/">요구사항</a>을 미리 확인해보세요.
+                </div>
+
+                <p>
+                    <strong>하루프레스</strong>는 노드를 기반하여 모든 소스코드가 자바스크립트로 작성되었습니다. 하루프레스를 이용하기 위해서는 노드 최신버젼을 설치해 주어야 합니다.
+
+                    <a href="http://nodejs.org" target="_blank">노드 공식 사이트</a>를 통해 설치방법과 레퍼런스를 얻을 수 있습니다. 하루프레스를 사용하시려면 <a href="https://github.com/creationix/nvm" target="_blank"><strong>nvm</strong></a> 와 같은 노드 버젼 메니저를 사용하기를 권장합니다. <br/>
+                    <a href="http://nodejs.org/" target="_blank"><img src="/img/intro/nodejs.png" /></a>
+                </p>
+
+                <p>
+                    <strong>하루프레스</strong>는 총 <a href="/post/opensource-with-haroopress">20여가지의 오픈소스와 2가지의 오픈 스펙</a>을 기반으로 개발되었고 대부분의 오픈소스가 모두 Github.com 을 통해 관리 되어지고 있어 하루프레스는 이것들을 서브모듈로 사용하고 있습니다. 
+
+                    <br/><br/><a href="http://git-scm.org/" target="_blank"><img src="/img/intro/git.png" /> </a><a href="http://git-scm.org/" target="_blank"><img src="/img/intro/github.png" /></a>
+                </p>
+                <p>
+                    또한 <strong><u>하루프레스가 생성하는 정적 페이지를 웹에서 확인하기 위해서는 Github.com 에 본인의 계정과 공개(Publish)된 저장소</u></strong>가 존재해야 합니다. (<a href="/post/haroopress-deploy-to-github/">저장소 생성</a>)
+                </p>
+                <p>
+                    <iframe src="http://player.vimeo.com/video/44383359?color=ffffff" width="100%" height="320" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/44383359">Install haroopress</a> from <a href="http://vimeo.com/rhio">rhiokim</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+                </p>
+            </div>
+            <div class="span6">
+                <h2><span class="icon-wrench"></span> 설치</h2>
+                <!--h5>쉬운 설치</h5>
+                <pre>
+<code class="bash">$ curl http://haroopress.com/install.sh | sh
+</code></pre-->
+
+                <h5>소스를 이용한 설치</h5>
+                <pre>
+<code class="bash">$ <strong>git clone https://github.com/rhiokim/haroopress.git /path/to/yourblog.com</strong>
+$ <strong>cd /path/to/yourblog.com</strong>
+$ <strong>make init</strong>
+... git submodule init ...</code></pre>
+
+하루프레스 초기화가 완료되면 자동으로 다음(아래) 단계를 진행합니다. 대부분 필수 설정 정보를 입력 받기 때문에 모두 입력하면 됩니다. 혹 실수로 잘못 입력했더라도 수정할 수 있기 때문에 다시 설치하지 않아도 됩니다.
+
+                <h5>하루프레스 환경(메타정보)설정</h5>
+                <pre>
+<code class="bash">haroo> Insert your site title (*) : 사이트 타이틀
+haroo> Insert your site description (*) : 사이트 설명
+haroo> Insert site url (*) : 사이트 주소
+haroo> Insert you full name (*) : 이름
+haroo> Insert you gravatar emaill address (*) : 이메일
+haroo> Insert you site meta information (*) : 메타 정보
+...
+
+haroo> Save? [y/n] : y ¶</code></pre>
+
+                <p>
+                    Github 계정이 없다면 먼저 생성한 후 본인의 아이디로 된 새로운 저장소를 생성한다. 저장소 명칭이 <code>id.github.com</code>
+                    으로된 저장소를 생성한다.
+
+                    <br/><br/>e.g) 아이디가 haroopress 라면 <a href="https://github.com/haroopress/haroopress.github.com" target="_blank">haroopress.github.com</a> 이라는 이름의 저장
+                </p>
+                <h5>배포를 위한 Github 저장소 지정</h5>
+
+                <pre>
+<code class="bash">haroo> Enter the read/write url for your repository 
+e.g) git@github.com:{github-id}/{github-id}.github.com.git
+</code></pre>
+                <p>
+                    자세한 설치법 : <a href="/post/haroopress-quick-guide">설치 퀵 가이드</a>, <a href="/post/harupeureseu-hwangyeongseoljeong-hagi/">수동 환경설정 가이드</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="soften">
+
+    <div class="marketing">
+        <h1>간편한 사용법</h1>
+        <p class="marketing-byline">포스팅(Posting), 생성(Generate), 퍼블리싱(Publishing).</p>
+    </div>
+    <div class="howto markdown-wrapper ">
+        <div class="row">
+            <div class="span4">
+                <h2><span class="icon-edit"></span> 포스팅하기</h2>
+                <p>
+                    하루프레스에서 새로운 콘텐츠를 생성하고 싶을땐 몇가지 명령어만 알면됩니다. 새로운 글 <code>make new-post</code>, 새로운 페이지 <code>make new-page</code>, 새로운 웹 슬라이드 <code>make new-slide</code> 를 실행하면 됩니다.
+
+                    <h5>새로운 포스트</h5>
+                    <pre class="bash"><code>$ <strong>make new-post</strong>
+haroo> Input article title : 기사 제목 ¶
+haroo> Input article category : 카테고리 ¶
+haroo> Input article tag (e.g tag1, tag2, tag3) : 태그 ¶
+haroo> 파일 및 디렉토리 생성 정보</code></pre>
+
+                    <h5>새로운 페이지</h5>
+                    <pre class="bash"><code>$ <strong>make new-post</strong></code></pre>
+
+                    <h5>새로운 웹슬라이드</h5>
+                    <pre class="bash"><code>$ <strong>make new-slide</strong></code></pre>
+               </p>
+            </div>
+            <div class="span4">
+                <h2><span class="icon-magic"></span> 생성하기</h2>
+                <p>
+                    데이터베이스가 필요없는 하루프레스의 모든 데이터는 페이지로 생성됩니다.
+                    <code>make gen</code> 명령어로 정적 페이지를 생성할 수 있습니다.
+
+                    <h5>정적 페이지 생성</h5>
+                    <pre class="bash"><code>$ <strong>make gen</strong>
+... 생성 정보 ...</code></pre>
+               </p>
+                <p>
+                    퍼블리싱하기 전 작성한 기사나 페이지가 어떻게 표시되는지 확인하고 싶다면 간단한 명령어만으로 내 컴퓨터에서 바로 볼 수 있습니다.
+                    <h5>배포 전 미리보기</h5>
+                    <pre class="bash"><code>$ <strong>make preview</strong>
+haroo> Start server at http://localhost:8081 ¶
+Do you want check on the browser? [y(es)/n] : </code></pre>
+
+                    <h5>생성과 미리보기 동시에</h5>
+                    <pre class="bash"><code>$ make gen && make preview</code></pre>
+               </p>
+            </div>
+            <div class="span4">
+                <h2><span class="icon-github"></span> 퍼블리싱하기</h2>
+                <p>
+                    하루프레스는 <code>make deploy</code> 라는 명령어로 설치 과정에서 지정한 Github 저장소로 퍼블리싱을 해줍니다.
+
+                    이 과정에서는 Github.com 에 <a href="http://localhost:8081/post/haroopress-deploy-to-github/">저장소 생성</a>이 필수입니다.
+
+                    <h5>Github 저장소로 배포</h5>
+                    <pre class="bash"><code>$ <strong>make deploy</strong>
+... 배포 진행 과정 ...
+haroo> open http://yourblog.com ? [y/n]</code></pre>
+                    하루프레스는 <a href="https://help.github.com/categories/20/articles" target="_blank">Github의 Pages 서비스</a>를
+                    이용하여 사이트가 운영되기 때문에 생성된 정적 파일들을 설치 시 지정한 Github 저장소로 자동으로 배포를 진행합니다.
+
+                    <h5>배포 메세지 지정하기</h5>
+                    <pre class="bash"><code>$ make deploy <strong>msg="커밋메세지"</strong>
+... 배포 진행 과정 ...
+haroo> open http://yourblog.com ? [y/n]</code></pre>
+               </p>
+            </div>
+        </div>
+    </div>
+
+    <a  name="theme"></a>
+    <hr class="soften">
+    <div class="marketing">
+        <h1>개발자스러운 감각적인 테마들</h1>
+        <p class="marketing-byline">개발자스럽지 않는 테마는 여기에 나열하지 않았습니다. 너무 이쁘거나 너무 번잡한 테마는 IE6 에서만 지원합니다.</p>
+        <ul class="thumbnails example-sites">
+            <li class="span3">
+              <a class="thumbnail" target="_blank">
+                <img src="img/themes/basic.png" alt="SoundReady.fm">
+              </a>
+              <div class="" style="margin:8px 5px;">
+                  <h4>하루프레스 기본테마</h4>
+                  <div style="font-size:1.1em; font-weight: bold;"><span style=" color: red">free</span><!-- / <span class="icon-shopping-cart"></span>1,372</div>-->
+              </div>
+            </li>
+            <li class="span3">
+              <a class="thumbnail" target="_blank">
+                <img src="img/themes/clean.png" alt="SoundReady.fm">
+              </a>
+              <div class="" style="margin:8px 5px;">
+                  <h4>깨끗한 판타롱 테마</h4>
+                  <div style="font-size:1.1em; font-weight: bold;"><span style=" color: red"> free</span><!-- / <span class="icon-shopping-cart"></span>89</div>-->
+              </div>
+            </li>
+            <li class="span3">
+              <a class="thumbnail" target="_blank">
+                <img src="img/themes/wood-dark.png" alt="SoundReady.fm">
+              </a>
+              <div class="" style="margin:8px 5px;">
+                  <h4>다크 우드 테마</h4>
+                  <div style="font-size:1.1em; font-weight: bold;"><span style=" color: red"> free</span><!-- / <span class="icon-shopping-cart"></span>632</div>-->
+              </div>
+            </li>
+            <li class="span3">
+              <a class="thumbnail" target="_blank">
+                <img src="img/themes/wood.png" alt="SoundReady.fm">
+              </a>
+              <div class="" style="margin:8px 5px;">
+                  <h4>밝은 우드 테마 테마</h4>
+                  <div style="font-size:1.1em; font-weight: bold;"><span style=" color: red"> free</span><!-- / <span class="icon-shopping-cart"></span>297</div>-->
+              </div>
+            </li>
+        </ul>
+    </div>
+
+    <hr class="soften">
+    <div class="marketing">
+        <h1>하루프레스를 이용한 아름다운 사이트</h1>
+        <p class="marketing-byline">너무나도 개발자틱하지만 최상급의 뛰어난 콘텐츠는 다량 보유한 하루프레스 사이트</p>
+        <ul class="thumbnails example-sites">
+            <li class="span4">
+                <a class="thumbnail" href="http://frends.kr/" target="_blank" title="노드 닌자그룹">
+                    <img src="img/sites/frends.kr-320.png" alt="frends.kr">
+                    <div class="caption">프론트앤드 해커 그룹</div>
+                </a>
+            </li>
+            <li class="span4">
+                <a class="thumbnail" href="http://nodejs.kr/" target="_blank" title="노드 닌자그룹">
+                    <img src="img/sites/nodejs.kr-320.png" alt="nodejs.kr">
+                    <div class="caption">노드 닌자, 해커 그룹</div>
+                </a>
+            </li>
+            <li class="span4">
+              <a class="thumbnail" href="http://haroopress.com/" target="_blank" title="하루프레스 공식 사이트">
+                <img src="img/sites/haroopress-320.png" alt="SoundReady.fm">
+                  <div class="caption">하루프레스 공식 사이트</div>
+              </a>
+            </li>
+        </ul>
+    </div>
+
+    <hr class="soften">
+
+    <script src="http://widgets.twimg.com/j/2/widget.js"></script>  
+    <div class="row">
+        <div class="span6">
+            <h2><span class="icon-group"></span> Community Reaction</h2>
+
+            <script>
+                new TWTR.Widget({
+                  version: 2,
+                  type: 'search',
+                  search: '#haroopress_ref',
+                  interval: 60000,
+                  title: '하루프레스 커뮤니티가 나누는 하루프레스에 관한 유용한 정보',
+                  subject: '하루프레스 레퍼런스 관련 트윗 (#haroopress_ref)',
+                  height: 200,
+                  theme: {
+                    shell: {
+                      background: 'transparent',
+                      color: '#333'
+                    },
+                    tweets: {
+                      background: 'transparent',
+                      color: '#333',
+                      links: '#c10000'
+                    }
+                  },
+                  features: {
+                    scrollbar: false,
+                    loop: true,
+                    live: true,
+                    hashtags: true,
+                    timestamp: true,
+                    avatars: true,
+                    toptweets: true,
+                    behavior: 'default'
+                  }
+                }).render().start();
+            </script>
+        </div>
+        <div class="span6">
+            <h2><span class="icon-twitter"></span> SNS Reaction</h2>
+            <script>
+                new TWTR.Widget({
+                  version: 2,
+                  type: 'search',
+                  search: 'haroopress -haroopress_ref OR 하루프레스',
+                  interval: 6000,
+                  title: '사용자들이 하루프레스에 대해서 무슨 이야기를 나눌까?',
+                  subject: '하루프레스(haroopress)와 관련된 모든 트윗',
+                  height: 200,
+                  theme: {
+                    shell: {
+                      background: 'transparent',
+                      color: '#333'
+                    },
+                    tweets: {
+                      background: 'transparent',
+                      color: '#333',
+                      links: '#c10000'
+                    }
+                  },
+                  features: {
+                    scrollbar: false,
+                    loop: true,
+                    live: true,
+                    hashtags: true,
+                    timestamp: true,
+                    avatars: true,
+                    toptweets: true,
+                    behavior: 'default'
+                  }
+                }).render().start();
+            </script>
+        </div>
+    </div>
+    <hr>
+    <div class="roadmap">
+        <div class="row">
+            <div class="span4">
+                <h2><span class="icon-sitemap"></span> Roadmap</h2>
+                <p>
+                     <ul class="unstyled">
+                        <li><span class="icon-plus"></span> 다국어를 지원</li>
+                        <li><span class="icon-plus"></span> 마크다운 프리젠테이션 플러그인</li>
+                        <li><span class="icon-plus"></span> 데이터 컨버터 (워드프레스, 블로거, 텀블러 등)</li>
+                        <li><span class="icon-plus"></span> Heroku 배포와 Rsync 방식 배포 지원</li>
+                        <li><span class="icon-plus"></span> 템플릿 엔진과 테마 기능 고도화</li>
+                        <li><span class="icon-plus"></span> 윈도우 지원</li>
+                     </ul>
+                </p>
+            </div>
+            <div class="span8">
+                <div class="row">
+                    <div class="span5">
+                        <h2><span class="icon-sitemap"></span> License</h2>
+                        <p>
+                            하루프레스는 <a href="http://rhiokim.mit-license.org/" target="_blank">MIT 라이센스</a>에 따른
+                            오픈소스 프로젝트로 <a href="http://github.com/rhiokim/haroopress">Github</a>에 게시하고 있습니다. 그리고
+                            하루프레스 엔진에서 사용하고 있는 <a href="/post/opensource-with-haroopress">오픈 소스</a>들은 각각의 라이센스를 따릅니다.
+                        </p>
+
+                        <h2><span class="icon-gift"></span> Special Thanks</h2>
+                        <p>
+                            다수(클린, 다크, 프로모션 등)의 테마를 만들어 주신 <a href="http://twitter.com/fantalon" target="_blank">@fantalon</a> / 공식 릴리즈를 위해 많은 테스트와 피드백을 준 <a href="http://twitter.com/andrwj" target="_blank">@andrwj</a> 와 <a href="http://twitter.com/insanehong" target="_blank">@insanehong</a> 님께 감사드립니다.
+                        </p>
+                    </div>
+                    <div class="span3">
+                        <h2><span class="icon-gift"></span> Contact</h2>
+                        <ul class="unstyled">
+                            <li><span class="icon-envelope"></span> Email : <a href="mailto:rhio.kim@gmail.com">Rhio Kim</a></li>
+                            <li><span class="icon-twitter"></span> Twitter: <a href="http://twitter.com/rhiokim" target="_blank">@rhiokim</a></li>
+                            <li><span class="icon-github"></span> Github : <a href="http://github.com/rhiokim">Rhio Kim</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span12 ">
+                    <div class="well">
+                        <p class="pull-right"><a href="#">Back to top</a></p>
+                            <strong>haroopress</strong> developed by <a href="http://twitter.com/rhiokim" target="_blank">@rhiokim</a>,<a href="http://twitter.com/haroopress" target="_blank">@haroopress</a> and source in <a href="https://github.com/rhiokim/haroopress" target="_blank">github</a><br/>
+                            Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.<br />
+                            Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+
+
+</body>
+</html>

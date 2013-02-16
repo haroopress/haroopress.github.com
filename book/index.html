@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Book 하루프레스(Haroopress)</title>
+    <meta name="description" content="하루프레스는 개발자를 위한 블로그 엔진으로 웹서버와 데이터 베이스가 필요없이 마크다운(Markdown)으로 포스팅만하면 정적 페이지 방식으로 블로그를 자동으로 생성해줍니다.">
+    <meta name="author" content="Rhio Kim">
+    <meta name="keywords" content="haroopress,node.js,blog,wordpress,octopress" />
+    <meta name="generator" content="haroopress v0.9.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="/rss.xml" rel="alternate" title="하루프레스(Haroopress)" type="application/rss+xml">
+
+    <!-- Le styles -->
+    <link rel="canonical" href="http://haroopress.com">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/markdown.css" rel="stylesheet">
+    <link href="/css/prettify.css" rel="stylesheet">
+    <link href="/css/haroopress.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <link href="/css/code/default.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-64.png">
+
+    <!-- Le javascript -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/apps/toc.js"></script>
+</head>
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+        <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+
+          <a class="pull-right" href="/rss.xml" onclick="_gaq.push(['_trackEvent', 'header', 'rss'])"><span class="icon-rss"></span></a>
+          
+
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li>
+                <a href="/" onclick="_gaq.push(['_trackEvent', 'header', 'home'])">Home</a>
+              </li>
+              <li>
+                <a href="/archives" onclick="_gaq.push(['_trackEvent', 'header', 'archives'])">Archives</a>
+              </li>
+              <li>
+                <a href="/slides" onclick="_gaq.push(['_trackEvent', 'header', 'slides'])">Slides</a>
+              </li>
+                
+                    <li>
+                      <a href="/about/" onclick="_gaq.push(['_trackEvent', 'header', '/about/'])">About</a>
+                    </li>
+                
+                    <li>
+                      <a href="/book/" onclick="_gaq.push(['_trackEvent', 'header', '/book/'])">Book</a>
+                    </li>
+                
+                    <li>
+                      <a href="/communities/" onclick="_gaq.push(['_trackEvent', 'header', '/communities/'])">커뮤니티</a>
+                    </li>
+                
+                    <li>
+                      <a href="/tutorial/" onclick="_gaq.push(['_trackEvent', 'header', '/tutorial/'])">튜토리얼</a>
+                    </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+<link href="/css/code/default.css" rel="stylesheet">
+
+<div class="container page-page">
+    <div class="row">
+        <div class="span12">
+            <div class="well markdown-wrapper">
+                <ul class="unstyled share pull-right">
+                    <li class="twitter">
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-url="http://haroopress.com/book/" data-via="rhiokim" data-hashtags="">Tweet</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        <!--a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+                        <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script-->
+                    </li>
+                    <li class="facebook">
+                        <div id="fb-root"></div>
+                        <script>(function(d, s, id) {
+                          var js, fjs = d.getElementsByTagName(s)[0];
+                          if (d.getElementById(id)) {return;}
+                          js = d.createElement(s); js.id = id;
+                          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                          fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));</script>
+                        <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-href="http://haroopress.com/book/"></div>
+                    </li>
+                    <li class="google">
+                        <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+                        <g:plusone size="medium"></g:plusone>
+                    </li>
+                </ul>
+                <blockquote>
+<p>이 페이지는 하루프레스를 개발한 전 과정에 대한 이야기를 책으로 만들기 위한 프로젝트 속에 프로젝트 일환으로 진행중인 페이지입니다.</p></blockquote>
+
+<h2 id="toc_218">하루프레스</h2>
+
+<h3 id="toc_219">하루프레스란?</h3>
+<p>하루프레스는 하루라는 순 우리말과 프레스라는 단어의 조합으로 <strong>하루에 이야기</strong>를 작성하여 <strong>발행</strong>하는 매우 간단한 블로그 엔진이라는 의미에서 <strong>하루프레스</strong> 라고 이름을 지었다.</p><p>그리고 기술적으로는 <strong>웹 서버와 데이터베이스</strong>가 필요 없는 정적 페이지 기반의 블로깅 엔진이다. 정적 페이지 기반 블로그란 PHP 로 만들어진 워드 프레스와 같이 서버측에서 프로그램이 동작하는 것이 아닌 블로그를 구성하는 모든 페이지를 HTML 로 생성하는 프로그램을 말한다. </p><p>하루프레스는 블로그를 위한 모든 콘텐츠를 정적 페이지(HTML)로 생성한다.  그리고 이렇게 생성된 페이지들을 인터넷이 되지 않는 개인 컴퓨터에서 볼 수도 있고 Github 의 정적 페이지 서비스를 이용해 퍼블리싱도 할 수 있다.</p><p>그리고 HTML5, CSS3 을 이용한 테마와 플러그인도 존재하여 다양한 편리한 기능을 부가적으로 제공한다.</p><p>그리고 마지막으로 하루프레스의 가장 중요한 목표는 블로그가 필요한 사람들보다 블로깅을 하려는 사람들에게 불필요한 서버 구성, 데이터 베이스 설치 등을 잊고 글 쓰는 곳에만 몰입할 수 있도록 하는데에 있다. </p>
+<h3 id="toc_220">누구를 위한 것인가?</h3>
+<p>현재 개발중인 하루프레스는 개발자들을 위해서 개발되었다.  콘솔 작업에 익숙하고 Git 을 통한 버젼관리가 익숙하고 문서를 정리할 때 무심코 마크다운 에디터를 실행하고 마크다운으로 문서를 작성하는게 편안함을 느끼는 개발자를 위한 하루프레스이다.</p>
+<h3 id="toc_221">하루프레스를 만들게 된 계기</h3>
+<p>처음엔 개인적으로 진행중인 웹 애플리케이션 자동화 봇 프로젝트에서 프로젝트를 소개할 만한 블로그 형태의 사이트가 필요해서 시작하게 되었습니다.</p><p>떠오른 아이디어가 <strong>마크다운</strong> 으로 작성된 문서를 간편하게 웹으로 퍼블리싱할 수 있는 방법이 필요했다.</p><p>물론 현존하는 다양한 블로그 엔진이 많다. 하지만 이미 고도화되고 성숙된 기능들을 많이 가지고 있어 편리하지만 고도화 된 만큼 사용자에게도 높은 학습 과정을 필요로 한다.  더욱이 내가 원하는 형태로 커스터마이징을 하기 위해서는 서버 시스템도 필요하고 웹 서버를 직접 설치하고 DBMS 도 직접 구축 해야하는 복잡함이 있다.</p><p>그러던 중 루비로 작성된 <a href="http://octopress.org">옥토프레스</a>라는 오픈소스 블로그 엔진을 알게 되었고 정적 페이지를 깃허브를 통해 퍼블리싱할 수 있는 자동화 시스템까지 갖추고 있었다.  또한 콘텐츠 포맷도 <strong>마크다운</strong> 으로 되어있었다.</p><p>That&#39;s it!</p><p>하지만 루비에 경험이 없는 상황에서 커스터마이징 하기가 쉽지는 않았다.  그래서 노드로 생각을 돌려서 하루프레스를 만들기 시작했다.</p>
+<ul>
+<li>루비로 작성된 옥토프레스의 노드 버젼을 만들고 싶었다.</li>
+<li>웹 애플리케이션 시대에 콘텐츠 메니징 시스템(CMS)의 변화 시도</li>
+<li>자바스크립트의 새로운 영역에 대한 도전과 가치를 만들고 싶었다.</li>
+<li>개발자로 살아오면서 가치있는 오픈소스 프로젝트를 남기고 싶었다.</li>
+</ul>
+
+<h3 id="toc_222">하루프레스의 목표와 얻고자 한 가치</h3>
+<p>하루프레스 개발을 시작하면서 갖었던 목표와 가치가 있었다. 
+그중 가장 중요한 것은 오픈 소스의 가치와 성공적인 소프트웨어를 만드는 것이였다.  </p><p><strong>성공</strong> 이라는 단어에는 굉장히 많은 의미를 함축하고 있지만 그중 가장 중요한 것은 성공적인 소프트웨어 이다. </p>
+<ul>
+<li>성공적인 소프트웨어를 만들어 보자.</li>
+<li>다뤄보지 않았던 신기술을 활용해 보자.</li>
+<li>모든 것을 자바스크립트로 구현하자.</li>
+<li>애자일을 적용하자.</li>
+<li>소프트웨어의 진행상황을 투명하게 하자.</li>
+<li>비즈니스 모델을 만들어서 적용해 보자.</li>
+<li>프로덕트 메니저의 역할을 학습해 보자.</li>
+</ul>
+
+<h4 id="toc_223">성공적인 소프트웨어</h4>
+<p><strong>성공</strong>적인 소프트웨어는 특별한 것이 아니다. 특히나 하루프레스와 같이 개인 만족을 위해 시작된 소프트웨어에서는 단순하다.  구현하고 싶었던 아이디어를 구현하는 것이다.</p><p>하루프레스의 아이디어는 블로깅하고 싶은 개발자가 마크다운으로 블로깅을 하는 것이였다.  그래서 성공했다. 현재 버젼에서도 미래의 버젼에서도 하루프레스 유저는 마크다운으로 블로깅을 즐길 수 있을 것이다.</p><p>하지만 실패의 길로 갈 수도 있었다.  </p><p>구현중에 꾀 많은 아이디어들이 생겨났고 개발자가 아닌 일반인을 타겟을 넓히려 했고 크로스 플랫폼까지 고려하려 했다.  사실 이런 이유로 인해 공식 릴리즈가 느려진 이유가 되었다.</p><p>모든 프로덕트를 만드는데는 참여자의 욕심과 목표를 향한 몰입을 잘 조절하는 것이야 말로 성공적인 프로덕트를 만들 수 있게 한다.</p><p>하루프레스의 수 많은 나의 욕심과 아이디어가 이슈트래커와 에버노트에 쌓여가고 있다.</p>
+<h4 id="toc_224">다뤄보지 않았던 신기술</h4>
+<p>물론 하루프레스는 노드를 본격적으로 다루기 시작하면서 시작한 프로젝트이다.  그래서 노드 자체의 신기술을 이용하였다.</p><p>뿐마나 아니라 노드 확장 모듈들의 큐레이팅과 활용이 얼마나 높은 생산성을 유지해지고 새로운 기술을 손쉽게 습득하는지 알게 해주었다. 또한 오픈소스의 가치를 제대로 느끼게 되었다.</p><p>그리고 마크업 구성을 위해서는 트위터 부트스트랩을 사용하였고 이를 통해 less 에 대해서도 알게 되었다.  응답형 웹에 대한 개념도 알게 되었다.</p><p>그 외에도 노드를 이용해 Git 을 제어하면서 쉘 기반의 시스템 프로그래밍에 대한 이해도가 조금씩 커짐을 느끼게 되었다.</p>
+<h4 id="toc_225">모든 것을 자바스크립트로</h4>
+<p>노드 자체가 자바스크립트이니 뭐 깊게 이야기할 것은 없다.  브라우저에서도 자바스크립트를 이용해 성숙한 사용자 경험을 제공하고 오픈 API 들을 이용해 플러그인을 만들 수 있었다.</p><p>뿐만 아니라 노드에서는 마크다운 파서를 이용해 마크다운을 HTML 로 생성하거나 </p>
+<h4 id="toc_226">애자일</h4>
+
+<blockquote>
+<p>작성예정</p></blockquote>
+
+<h4 id="toc_227">소프트웨어의 진행상황을 투명하게</h4>
+
+<blockquote>
+<p>작성예정</p></blockquote>
+
+<h4 id="toc_228">비즈니스 모델</h4>
+
+<blockquote>
+<p>작성예정</p></blockquote>
+
+<h4 id="toc_229">프로덕트 매니징</h4>
+
+<blockquote>
+<p>작성예정</p></blockquote>
+
+<h3 id="toc_230">워드프레스와의 차이점</h3>
+<p><strong>단순함</strong> 이 가장 큰 차이점이자 장점이다.  물론 그만큼 고급 옵션들이나 사용자에게 편안한 GUI 방식은 아직은 제공하지 않는다는 말도 된다.</p><p>하루프레스는 &#39; 나 지금 블로깅을 하고 싶어. 근데 웹 서버 구축하기도 싫고 데이터베이스 셋팅하기도 귀찮아. 그냥 내 컴퓨터에 글쓰고 싶을때 쓰면 바로 적용되면 좋을 텐데…&#39; 라는 생각의 해결책이다.  </p><p>하루프레스는 &#39;나 지금 블로깅하고 싶다&#39; 라고 생각하는 사람들에게 블로깅을 할 수 있게 해주는 도구이다. 물론 온라인에서 제공하는 많은 서비스들도 있고 직접 웹 서버 환경을 구축해서 나만의 블로그 환경을 구축할 수 있는 오픈 소스들도 많다. </p><p>이런 서비스들은 중요한 단점들이 있다. 언제든지 블로깅을 하기가 쉽지 않고 블로깅을 해야하지만 </p>
+<h2 id="toc_231">하루프레스 사용 메뉴얼</h2>
+
+<h3 id="toc_232">요구사항</h3>
+
+<ul>
+<li>노드 설치하기</li>
+<li>Git 설치하기</li>
+</ul>
+
+<h3 id="toc_233">깃허브설정</h3>
+
+<h3 id="toc_234">소스클론</h3>
+
+<h3 id="toc_235">환경설정</h3>
+<p>config.js</p>
+<h3 id="toc_236">제너레이팅</h3>
+<p><code>make gen</code></p>
+<h3 id="toc_237">프리뷰</h3>
+<p><code>make preview</code></p>
+<h3 id="toc_238">글쓰기</h3>
+<p><code>make new-post</code></p>
+<h3 id="toc_239">배포하기</h3>
+
+<ul>
+<li>Github 에 배포하기</li>
+<li>Heroku 에 배포하기</li>
+<li>Rsync 로 배포하기</li>
+</ul>
+
+<h3 id="toc_240">페이지 생성</h3>
+<p><code>make new-page</code></p>
+<h3 id="toc_241">웹 슬라이드 생성</h3>
+<p><code>make new-slide</code></p>
+<h3 id="toc_242">플러그인 설정</h3>
+
+<h3 id="toc_243">포스트 버젼관리</h3>
+
+<h3 id="toc_244">포스트 드랍박스 연동</h3>
+
+<h3 id="toc_245">테마 만들기</h3>
+
+<h2 id="toc_246">하루프레스 개발 히스토리</h2>
+
+<h3 id="toc_247">애자일</h3>
+
+<h3 id="toc_248">계획</h3>
+
+<ul>
+<li>마일스톤</li>
+<li>이슈 및 타스크 관리</li>
+</ul>
+
+<h3 id="toc_249">일정산정</h3>
+
+<h3 id="toc_250">설계와 구현</h3>
+
+<h3 id="toc_251">버젼관리</h3>
+
+<h3 id="toc_252">이슈관리</h3>
+
+<h3 id="toc_253">테스트</h3>
+
+<h3 id="toc_254">문서화</h3>
+
+<h2 id="toc_255">마치며</h2>
+<p>약 3개월 가량 하루프레스에 미쳐 살았다.  주변의 반응과 쏟아지는 정보를 모두 튕겨내고 한가지 일에 몰두했다.</p><p>지난 6년동안 자바스크립트의 수 많은 가능성에 도전을 해왔고 이번 프로젝트도 그 일환중에 하나였다.  2010년부터 자바스크립트의 전성시대라 대중들에게 떠들었을뿐 그 가능성을 하나씩 실현에 옮기고 싶었다.</p><p>UI 개발, 아두이노라는 마이크로 컨트롤러 제어, 음성기반의 하드웨어 제어 그리고 서버와 클리언트에 동일한 언어로 개발된 하루프레스가 그중에 하나이다.</p>
+<h3 id="toc_256">오픈소스</h3>
+
+<h3 id="toc_257">깃허브와 오픈소스 프로젝트</h3>
+<p>앞에서도 이야기를 했지만 하루프레스 프로젝트를 진행하면서 깃허브의 역할은 굉장히 컸다.  </p><p>간략하게 그 느낀바를 정리하면 다음과 같다.</p>
+<ul>
+<li>깃허브는 프로젝트를 성공적인 결과물로 만들어주기 위한 깔끔하고 심플한 매니저이다.</li>
+<li>프로젝트의 성공을 위한 필수 도구이다.</li>
+<li>개발자의 열정을 절제시켜주는 도구이다.</li>
+<li>개발자에게 휴식과 여유를 만들어 주는 도구이다.</li>
+<li>개발자에게 작업의 공간을 초월하게 해주는 도구이다.</li>
+<li>프로덕트를 향한 개발자의 열정을 유지시켜주는 도구이다.</li>
+<li><p>소프트웨어 설계에도 영향을 미치는 도구이다.</p></li>
+<li><p>내 아이가 커가는 모습을 스냅샷처럼 기록해주는 훌륭한 도구이다.</p></li>
+</ul>
+
+<h3 id="toc_258">노드(node.js)와 자바스크립트</h3>
+
+<h3 id="toc_259">큐레이션</h3>
+
+<h3 id="toc_260">스펙</h3>
+
+            </div>
+        </div>
+    </div>
+</div><!-- /container -->
+
+
+        <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span12 ">
+                    <div class="well">
+                        <p class="pull-right"><a href="#">Back to top</a></p>
+                            <strong>haroopress</strong> developed by <a href="http://twitter.com/rhiokim" target="_blank">@rhiokim</a>,<a href="http://twitter.com/haroopress" target="_blank">@haroopress</a> and source in <a href="https://github.com/rhiokim/haroopress" target="_blank">github</a><br/>
+                            Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.<br />
+                            Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // fix sub nav on scroll
+        var $win = $(window)
+          , $nav = $('.subnav')
+          , navTop = $('.subnav').length && $('.subnav').offset().top - 40
+          , isFixed = 0
+
+        processScroll()
+
+        $win.on('scroll', processScroll)
+
+        function processScroll() {
+          var i, scrollTop = $win.scrollTop()
+          if (scrollTop >= navTop && !isFixed) {
+            isFixed = 1
+            $nav.addClass('subnav-fixed')
+          } else if (scrollTop <= navTop && isFixed) {
+            isFixed = 0
+            $nav.removeClass('subnav-fixed')
+          }
+        }
+
+
+    </script>
+    
+
+
+</body>
+</html>

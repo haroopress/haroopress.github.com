@@ -1,0 +1,299 @@
+/* */
+.navbar span.icon-twitter, .navbar span.icon-rss {
+    margin-top: 12px;
+    margin-left: 5px;
+    font-size: 24px;
+}
+
+.intro-head {
+    background-color: #049CD9;
+    background-repeat: no-repeat;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#A92929), to(#DB3535));
+    background-image: -webkit-linear-gradient(#A92929, #DB3535);
+    background-image: -moz-linear-gradient(#A92929, #DB3535);
+    background-image: -o-linear-gradient(top, #A92929, #DB3535);
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#A92929), to(#DB3535));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a92929', endColorstr='#db3535', GradientType=0);
+}
+
+.intro-head .inner {
+    background: transparent url(../img/background-haroopress.png) center -50px;
+    padding: 45px 0 20px 0;
+    -webkit-box-shadow: inset 0 10px 30px rgba(0, 0, 0, .3);
+    -moz-box-shadow: inset 0 10px 30px rgba(0,0,0,.3);
+}
+
+.intro-head h1 {
+    line-height: 1;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .5);
+}
+
+.intro-head h1, .intro-head p {
+    margin-bottom: 9px;
+    color: white;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}
+
+.intro-head .container {
+  width: auto;
+  padding: 20px;
+}
+
+/* Desktop
+------------------------- */
+@media (min-width: 980px) {
+  /* Unfloat brand */
+  body > .navbar-fixed-top .brand {
+    float: left;
+    margin-left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* Inline-block quick links for more spacing */
+  .quick-links li {
+    display: inline-block;
+    margin: 5px;
+  }
+
+  .intro-head {
+    margin-top: 40px; /* Offset bottom margin on .navbar */
+  }
+
+  .intro-head h1 {
+    font-size: 4em;
+  }
+
+  .intro-head p.lead {
+    font-size: 1.8em;
+  }
+
+  /* download information */
+  .download-info {
+    margin: 50px 0;
+  }
+}
+
+/* Tablet to desktop
+------------------------- */
+@media (min-width: 768px) and (max-width: 980px) {
+  /* Remove any padding from the body */
+  body {
+    padding-top: 0;
+  }
+  /* Widen masthead and social buttons to fill body padding */
+  .intro-head {
+    margin-top: -20px; /* Offset bottom margin on .navbar */
+  }
+  .intro-head h1 {
+    font-size: 3em;
+  }
+
+  .intro-head p.lead {
+    font-size: 1.3em;
+  }
+
+  .download-info {
+    margin: 35px 0 !important;
+  }
+}
+
+/* Tablet
+------------------------- */
+@media (max-width: 767px) {
+  /* Remove any padding from the body */
+  body {
+    padding-top: 0;
+  }
+
+  .intro-head {
+    /*padding-top: 40px;*/
+    margin-top: -20px;
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+  .intro-head h1 {
+    font-size: 2em;
+  }
+
+  .intro-head p.lead {
+    font-size: 1.2em;
+  }
+
+  .download-info {
+    margin: 25px 0 !important;
+  }
+}
+
+
+/* inherit */
+.page-main {
+    margin-top: 0;
+}
+
+.page-main .btn-large {
+    font-size: 20px;
+    font-weight: normal;
+    padding: 14px 24px;
+    margin-right: 10px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.page-main .btn-large small {
+    font-size: 14px;
+}
+
+.download-info {
+    text-align: center;
+    display: inline-block;
+}
+/* rhiokim message */
+.author-img {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+    margin-right: 10px;
+}
+
+/* quick link */
+.quick-links {
+    min-height: 30px;
+    margin: 0;
+    padding: 5px 20px;
+    list-style: none;
+    text-align: center;
+    overflow: hidden;
+}
+
+.quick-links li {
+    display: inline;
+    margin: 0 8px;
+    color: #999;
+}
+li {
+    line-height: 18px;
+}
+
+.intro h2 {
+    /*margin: 36px 0 27px;*/
+    font-size: 1.8em;
+    font-weight: 200;
+    /*text-align: center;*/
+}
+
+.howto h2 {
+    font-size: 1.8em;
+    font-weight: 100;
+}
+.howto h3 {
+    font-size: 1.3em;
+    font-weight: 200;
+}
+
+hr.soften {
+    height: 1px;
+    margin: 60px 0;
+    background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, .1), transparent);
+    background-image: -moz-linear-gradient(left, transparent, rgba(0, 0, 0, .1), transparent);
+    background-image: -ms-linear-gradient(left, transparent, rgba(0, 0, 0, .1), transparent);
+    background-image: -o-linear-gradient(left, transparent, rgba(0, 0, 0, .1), transparent);
+    border: 0;
+}
+
+.marketing h1 {
+    margin: 36px 0 27px;
+    font-size: 3em;
+    font-weight: 200;
+    text-align: center;
+}
+.marketing p {
+    margin-right: 10px;
+}
+.marketing-byline {
+    margin: -18px 0 27px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+    color: #999;
+    text-align: center;
+}
+
+.row.bottom {
+    margin-bottom: 9px;
+}
+.row.bottom20 {
+    margin-bottom: 20px;
+}
+
+.roadmap {
+    margin-bottom: 20px;
+}
+
+/* --- twitter search widget ------------------------------------------*/
+/* twitter search widget */
+/* http://www.1stwebdesigner.com/css/customize-twitter-search-widgets/ */
+.span6 .twtr-widget { width: 100%; }
+.span6 .twtr-doc { width: 100% !important; }
+.span6 .twtr-timeline { height: 200px !important; }
+.twtr-widget {
+    float: left;
+    width: 380px;
+    /*margin: 50px 0 0 80px;*/
+    padding: 0 0 15px;
+    background: #fafafa url(/img/theme/wavecut.png);
+    
+    /*** cross browser box shadow ***/
+    -moz-box-shadow: 0 0 2px #fff;
+    -webkit-box-shadow: 0 0 2px #fff;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Glow(color=#ffffff,strength=3)";
+    filter:
+        progid:DXImageTransform.Microsoft.Shadow(color=#ffffff,direction=0,strength=3)
+        progid:DXImageTransform.Microsoft.Shadow(color=#ffffff,direction=90,strength=3)
+        progid:DXImageTransform.Microsoft.Shadow(color=#ffffff,direction=180,strength=3)
+        progid:DXImageTransform.Microsoft.Shadow(color=#ffffff,direction=270,strength=3);
+    box-shadow: 0 0 2px #fff;
+    
+    /*** kind of cross browser rounded corner ***/
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.twtr-hd {
+    /*** cross browser rgba ***/
+    background-color: transparent;
+    background-color: rgba(255,255,255,0.3);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#30ffffff,endColorstr=#30ffffff);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#30ffffff,endColorstr=#30ffffff)";
+}
+    .twtr-bd {}
+        .twtr-widget .twtr-bd .twtr-tweet {
+            margin: 5px 0 0;
+            padding: 0 0 5px;
+            border-bottom: 1px solid #cecece;
+        }
+        .twtr-tweet:before {
+            display: block;
+            float: left;
+            margin: 15px 0 0 5px;
+            font-size: 50px; /* let's make it a big quote! */
+            content: "“";
+            color: #bababa;
+            text-shadow: 0 1px 1px #909090;
+            font-family: "times new roman", serif;
+        }
+    .twtr-ft { display: none; }
+
+/* --- twitter search widget ------------------------------------------*/
+
+.social-area {
+  width: 100px;
+  margin-left: 10px;
+}

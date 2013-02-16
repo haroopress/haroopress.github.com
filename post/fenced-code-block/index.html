@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>구문 강조를 위한 펜스 코드 블럭(fenced code block) |  하루프레스(Haroopress)</title>
+    <meta name="description" content="하루프레스는 개발자를 위한 블로그 엔진으로 웹서버와 데이터 베이스가 필요없이 마크다운(Markdown)으로 포스팅만하면 정적 페이지 방식으로 블로그를 자동으로 생성해줍니다.">
+    <meta name="author" content="Rhio Kim">
+    <meta name="keywords" content="haroopress,node.js,blog,wordpress,octopress" />
+    <meta name="generator" content="haroopress v0.9.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="/rss.xml" rel="alternate" title="하루프레스(Haroopress)" type="application/rss+xml">
+
+    <!-- Le styles -->
+    <link rel="canonical" href="http://haroopress.com">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/markdown.css" rel="stylesheet">
+    <link href="/css/haroopress.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <link href="/css/code/default.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-64.png">
+
+    <!-- Le javascript -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/apps/github.js"></script>
+    <script src="/js/apps/twitter.js"></script>
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+</head>
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+        <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+
+          <a class="pull-right" href="/rss.xml" onclick="_gaq.push(['_trackEvent', 'header', 'rss'])"><span class="icon-rss"></span></a>
+          
+
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li>
+                <a href="/" onclick="_gaq.push(['_trackEvent', 'header', 'home'])">Home</a>
+              </li>
+              <li>
+                <a href="/archives" onclick="_gaq.push(['_trackEvent', 'header', 'archives'])">Archives</a>
+              </li>
+              <li>
+                <a href="/slides" onclick="_gaq.push(['_trackEvent', 'header', 'slides'])">Slides</a>
+              </li>
+                
+                    <li>
+                      <a href="/about/" onclick="_gaq.push(['_trackEvent', 'header', '/about/'])">About</a>
+                    </li>
+                
+                    <li>
+                      <a href="/book/" onclick="_gaq.push(['_trackEvent', 'header', '/book/'])">Book</a>
+                    </li>
+                
+                    <li>
+                      <a href="/communities/" onclick="_gaq.push(['_trackEvent', 'header', '/communities/'])">커뮤니티</a>
+                    </li>
+                
+                    <li>
+                      <a href="/tutorial/" onclick="_gaq.push(['_trackEvent', 'header', '/tutorial/'])">튜토리얼</a>
+                    </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+<link href="/css/code/tomorrow-night-blue.css" rel="stylesheet">
+<div class="container page-archive">
+    <div class="row">
+        <div class="span3">
+            <div id="author" class="well">
+                <div>
+                    <h3>About Author</h3>
+                    <ul class="thumbnails">
+                        <li>
+                            <a class="thumbnail">
+                                <img src="http://www.gravatar.com/avatar/0764d73c228492e36b339d8b6d7293ad?r=pg&amp;s=128.jpg&amp;d=identicon" />
+                            </a>
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>Rhio Kim</strong><br/>
+                        blog: <a href="http://rhio.tistory.com" target="_blank">http://rhio.tistory.com</a><br/>
+                        twitter: <a href="http://twitter.com/rhiokim" target="_blank">@rhiokim</a><br/>
+                        github: <a href="https://github.com/rhiokim" target="_blank">rhiokim</a>
+                    </p>
+                    <p>
+                        <a href="https://twitter.com/rhiokim" class="twitter-follow-button" data-show-count="true">Follow @rhiokim</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                    </p>
+                    <p>
+                        <p>자바스크립트를 좋아하는 인간입니다. </p>
+<ul>
+<li>Arduino</li>
+<li>Node.js</li>
+<li>HCI</li>
+</ul>
+
+                    </p>
+                </div>
+                <div>
+                    <h3>About this Article</h3>
+                    <p>
+                        <h5>Date Released:</h5>
+                        <span>Thursday, October 18 2012 3:08 AM</span>
+                    </p>
+                </div>
+            </div>
+                        <div class="well">
+                <ul class="nav nav-list">
+                    <li class="nav-header">Categories</li>
+                    <li class=""><a href="/category"><i class="icon-home"></i> Home</a></li>
+                    
+                    <li><a href="/category/haroopress"><i class="icon-book"></i> haroopress</a></li>
+                    
+                    <li><a href="/category/release"><i class="icon-book"></i> release</a></li>
+                    
+                    <li><a href="/category/tutorial"><i class="icon-book"></i> tutorial</a></li>
+                    
+                    <li><a href="/category/diary"><i class="icon-book"></i> diary</a></li>
+                    
+                </ul>
+            </div>
+
+            
+<div class="well">
+    <ul class="nav nav-list">
+        <li class="nav-header">Recent Articles</li>
+    
+        <li>
+            <a href="/post/2013-haroopress-plan" target="_blank">2013 하루프레스 계획
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+        <li>
+            <a href="/post/haroopress-v0-dot-9-2-release" target="_blank">하루프레스 v0.9.2 회고 및 릴리즈 노트
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+        <li>
+            <a href="/post/haroopress-install-requirements" target="_blank">하루프레스 설치 요구 사항 및 설치
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+        <li>
+            <a href="/post/haroopress-in-playnode-conference-2012" target="_blank">하루프레스 in #playnode conference 2012
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+        <li>
+            <a href="/post/support-plugins" target="_blank">하루프레스 확장 마크다운
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+    </ul>
+</div>
+
+        </div>
+        <div class="span9">
+            <div class="row">
+                <div class="span9">
+                    <div class="well bg">
+                        
+                        <div class="page-header">
+                            <h1>구문 강조를 위한 펜스 코드 블럭(fenced code block)</h1>
+                        </div>
+
+                        <div class="pull-right social-area">
+                            
+                            
+
+                            
+                        </div>
+
+                        <div class="markdown-wrapper">
+                            <blockquote>
+<p>요즘 컨퍼런스 준비와 회사에서 신규 프로젝트 런칭으로 연일 야근 중, 오늘은 퇴근하고 저녁 밥도 꾸역 꾸역 먹고 피곤에 쓰러져 버렸다. 근데 이 시간에 깨 버렸네. 잠들기 전에 작성하던 v0.9 에 추가된 펜스 코드 블럭에 대한 소개나 할까 한다.</p></blockquote>
+<p>언젠가부터 웹 페이지에 코드를 표현하고자 할 때 IDE 와 동일하게 구문 강조 라이브러리를 사용하게 되었다.  최근 Github.com 이 주목을 받으며 마크다운(markdown) 포맷 문서화와 펜스 코드 블럭(fenced code block) 이 자주 활용되곤 한다.  </p><p>하루프레스 0.9.0 버젼에서는 구문 강조를 위한 펜스 코드 블럭을 제공한다. 뿐만 아니라 코드블럭에 원하는 스타일을 적용할 수도 있다.</p>
+<h3 id="toc_14">구문강조 라이브러리</h3>
+<p>구문 강조는 <a href="http://softwaremaniacs.org/soft/highlight/en/">highlight.js</a> 를 이용했다.  <a href="http://softwaremaniacs.org/soft/highlight/en/">highlight.js</a> 는 52 가지 언어를 지원하고 26가지의 유명한 구문 강조 스타일(코드 테마)을 제공한다.</p>
+<h4 id="toc_15">지원언어</h4>
+
+<table><thead>
+<tr>
+<th>Language</th>
+<th>key</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Python</td>
+<td>python</td>
+</tr>
+<tr>
+<td>Python&#39;s profiler output</td>
+<td>profile</td>
+</tr>
+<tr>
+<td>Ruby</td>
+<td>ruby</td>
+</tr>
+<tr>
+<td>Perl</td>
+<td>perl</td>
+</tr>
+<tr>
+<td>PHP</td>
+<td>php</td>
+</tr>
+<tr>
+<td>Scala</td>
+<td>scala</td>
+</tr>
+<tr>
+<td>Go</td>
+<td>go</td>
+</tr>
+<tr>
+<td>XML</td>
+<td>xml</td>
+</tr>
+<tr>
+<td>HTML (with inline css and javascript</td>
+<td>xml</td>
+</tr>
+<tr>
+<td>Markdown</td>
+<td>markdown</td>
+</tr>
+<tr>
+<td>Django templates</td>
+<td>django</td>
+</tr>
+<tr>
+<td>CSS</td>
+<td>css</td>
+</tr>
+<tr>
+<td>JSON</td>
+<td>json</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td>javascript</td>
+</tr>
+<tr>
+<td>CoffeeScript</td>
+<td>coffeescript</td>
+</tr>
+<tr>
+<td>ActionScript</td>
+<td>actionscript</td>
+</tr>
+<tr>
+<td>VBScript</td>
+<td>vbscript</td>
+</tr>
+<tr>
+<td>HTTP</td>
+<td>http</td>
+</tr>
+<tr>
+<td>Lua</td>
+<td>lua</td>
+</tr>
+<tr>
+<td>Delphi</td>
+<td>delphi</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>java</td>
+</tr>
+<tr>
+<td>C++</td>
+<td>cpp</td>
+</tr>
+<tr>
+<td>Objective C</td>
+<td>objectivec</td>
+</tr>
+<tr>
+<td>Vala</td>
+<td>vala</td>
+</tr>
+<tr>
+<td>C#</td>
+<td>cs</td>
+</tr>
+<tr>
+<td>D</td>
+<td>d</td>
+</tr>
+<tr>
+<td>RenderMan RSL</td>
+<td>rsl</td>
+</tr>
+<tr>
+<td>RenderMan RIB</td>
+<td>rib</td>
+</tr>
+<tr>
+<td>MEL</td>
+<td>mel</td>
+</tr>
+<tr>
+<td>GLSL</td>
+<td>glsl</td>
+</tr>
+<tr>
+<td>SQL</td>
+<td>sql</td>
+</tr>
+<tr>
+<td>SmallTalk</td>
+<td>smalltalk</td>
+</tr>
+<tr>
+<td>Lisp</td>
+<td>lisp</td>
+</tr>
+<tr>
+<td>Clojure</td>
+<td>clojure</td>
+</tr>
+<tr>
+<td>Ini file</td>
+<td>ini</td>
+</tr>
+<tr>
+<td>Apache</td>
+<td>apache</td>
+</tr>
+<tr>
+<td>nginx</td>
+<td>nginx</td>
+</tr>
+<tr>
+<td>Diff</td>
+<td>diff</td>
+</tr>
+<tr>
+<td>DOS batch files</td>
+<td>dos</td>
+</tr>
+<tr>
+<td>Bash</td>
+<td>bash</td>
+</tr>
+<tr>
+<td>CMake</td>
+<td>cmake</td>
+</tr>
+<tr>
+<td>Axapta</td>
+<td>axapta</td>
+</tr>
+<tr>
+<td>1C</td>
+<td>1c</td>
+</tr>
+<tr>
+<td>AVR Assembler</td>
+<td>avrasm</td>
+</tr>
+<tr>
+<td>VHDL</td>
+<td>vhdl</td>
+</tr>
+<tr>
+<td>Parser 3</td>
+<td>parser3</td>
+</tr>
+<tr>
+<td>TeX</td>
+<td>tex</td>
+</tr>
+<tr>
+<td>Haskell</td>
+<td>haskell</td>
+</tr>
+<tr>
+<td>Erlang</td>
+<td>erlang</td>
+</tr>
+<tr>
+<td>Rust</td>
+<td>rust</td>
+</tr>
+<tr>
+<td>Matlab</td>
+<td>matlab</td>
+</tr>
+<tr>
+<td>R</td>
+<td>r</td>
+</tr>
+</tbody></table>
+
+<h3 id="toc_16">구문강조 테마 종류</h3>
+
+<table><thead>
+<tr>
+<th>Style</th>
+<th>key</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Default</td>
+<td><strong>default</strong></td>
+</tr>
+<tr>
+<td>Dark</td>
+<td><strong>dark</strong></td>
+</tr>
+<tr>
+<td>FAR</td>
+<td><strong>far</strong></td>
+</tr>
+<tr>
+<td>IDEA</td>
+<td><strong>idea</strong></td>
+</tr>
+<tr>
+<td>Sunburst</td>
+<td><strong>sunburst</strong></td>
+</tr>
+<tr>
+<td>Zenburn</td>
+<td><strong>zenburn</strong></td>
+</tr>
+<tr>
+<td>Visual Studio</td>
+<td><strong>vs</strong></td>
+</tr>
+<tr>
+<td>Ascetic</td>
+<td><strong>ascetic</strong></td>
+</tr>
+<tr>
+<td>Magula</td>
+<td><strong>magula</strong></td>
+</tr>
+<tr>
+<td><strong>GitHub</strong></td>
+<td><strong>github</strong></td>
+</tr>
+<tr>
+<td>Google Code</td>
+<td><strong>googlecode</strong></td>
+</tr>
+<tr>
+<td>Brown Paper</td>
+<td><strong>brown_paper</strong></td>
+</tr>
+<tr>
+<td>School Book</td>
+<td><strong>school_book</strong></td>
+</tr>
+<tr>
+<td>IR Black</td>
+<td><strong>ir_black</strong></td>
+</tr>
+<tr>
+<td><strong>Solarized - Dark</strong></td>
+<td><strong>solarized_dark</strong></td>
+</tr>
+<tr>
+<td>Solarized - Light</td>
+<td><strong>solarized_light</strong></td>
+</tr>
+<tr>
+<td>Arta</td>
+<td><strong>arta</strong></td>
+</tr>
+<tr>
+<td>Monokai</td>
+<td><strong>monokai</strong></td>
+</tr>
+<tr>
+<td>XCode</td>
+<td><strong>xcode</strong></td>
+</tr>
+<tr>
+<td>Pojoaque</td>
+<td><strong>pojoaque</strong></td>
+</tr>
+<tr>
+<td>Rainbow</td>
+<td><strong>rainbow</strong></td>
+</tr>
+<tr>
+<td><strong>Tomorrow</strong></td>
+<td><strong>tomorrow</strong></td>
+</tr>
+<tr>
+<td>Tomorrow Night</td>
+<td><strong>tomorrow-night</strong></td>
+</tr>
+<tr>
+<td>Tomorrow Night Bright</td>
+<td><strong>tomorrow-night-bright</strong></td>
+</tr>
+<tr>
+<td>Tomorrow Night Blue</td>
+<td><strong>tomorrow-night-blue</strong></td>
+</tr>
+<tr>
+<td>Tomorrow Night Eighties</td>
+<td><strong>tomorrow-night-eighties</strong></td>
+</tr>
+</tbody></table>
+<p>컬러 테마로 잘 알려진 Solarized, Tomorrow 씨리즈는 기본으로 Github 스타일도 제공한다.  그외 위와 같이 굉장히 다양한 스타일을 제공한다.</p><p>좀더 자세한 스타일은 <a href="http://softwaremaniacs.org/media/soft/highlight/test.html">여기</a>를 참고하세요.</p>
+<h2 id="toc_17">적용 방법</h2>
+<p><em class="label label-info"><strong>특징</strong></em> 하루프레스는 간단한 방법으로 코드블럭 테마를 전역적으로 적용할 수 있을 뿐 아니라 각 페이지마다 별도의 테마를 적용할 수 있다.</p><p>먼저 마크다운에서 코드 블럭을 지정하는 방법을 알아보도록 하자.</p>
+<h3 id="toc_18">코드 블럭</h3>
+<p>마크다운에서 기본 코드 블럭은 1 tab 혹은 4 spaces 이다.  그런데 <a href="http://github.github.com/github-flavored-markdown/">Github.com</a> 에서는 3개의 backtick <code>`</code> 을 연달아 작성하는 것으로 구문강조 코드 블럭을 지원하면서 이 <strong>Fenced Code Block</strong> 가 코드 블럭의 기본 방식처럼 되어가고 있다.</p><p>그외에 tilde <code>~</code> 3개를 이용해 코드 블럭을 지정하는 방법 중에 하나이다.</p>
+<pre><code class="markdown">```ruby
+code block
+```
+
+~~~
+fenced code block
+~~~
+
+~~~javascript
+function syntaxHighlight(code, lang) {
+   var foo = 'rhio';
+   var bar = 33;
+}
+~~~
+</code></pre>
+
+<h4 id="toc_19">예시</h4>
+<p><strong>javascript</strong></p><pre><code class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">syntaxHighlight</span><span class="params">()</span> {</span>
+   <span class="keyword">var</span> haroo = <span class="string">'press'</span>;
+   <span class="keyword">return</span> haroo;
+}
+</code></pre><p><strong>ruby</strong></p><pre><code class="ruby"><span class="function"><span class="keyword">def</span> <span class="title">syntaxHighlight</span></span>
+  <span class="variable">@haroo</span> = <span class="string">'press'</span>
+  <span class="keyword">return</span> <span class="variable">@haroo</span>
+<span class="keyword">end</span>
+</code></pre><p><strong>python</strong></p><pre><code class="python"><span class="function"><span class="keyword">def</span> <span class="title">syntaxHighlight</span><span class="params">()</span>:</span>
+    haroo = <span class="string">"press"</span>
+    <span class="keyword">return</span> haroo
+</code></pre>
+<h3 id="toc_20">기본 스타일</h3>
+<p>기본 스타일은 하루프레스 환경설정 파일에 설정하는 테마로 특별히 지정하지 않는 코드 블럭에는 환경설정에 지정한 스타일로 적용된다.</p><p>환경설정 파일은 하루프레스 설치 디렉토리에 <code>config.js</code> 파일에 존재한다. 이 파일을 JSON 포맷으로 이루어져있다.</p><p>코드 블럭 스타일을 지정은 <code>config.defaultCodeStyle</code> 이라는 값에 지정할 수 있다.  하루프레스 기본값은 <code>github</code> 으로 설정되어 있고 위의 스타일 목록에서 <code>key</code> 값을 참조하여 지정하면 된다.</p>
+<h3 id="toc_21">페이지별 스타일</h3>
+<p>하루프레스는 기본 스타일뿐만 아니라 포스팅 별 코드 블럭에 스타일을 지정할 수가 있다. 하루프레스를 이용하고 있는 유저라면 별 어려움이 없게 간단한 옵션 하나로 지정할 수 있다.</p><p>포스팅한 마크다운 파일을 열어 <a href="http://haroopress.com/post/haroopress-default-data-format/">메타 정보</a>의 JSON 포맷에 일부 옵션을 설정하면 된다.  </p>
+<ul>
+<li>참고 : <a href="http://haroopress.com/post/haroopress-default-data-format/">하루프레스의 기본 데이터 규약</a></li>
+</ul>
+<pre><code class="json"><span class="rules">{
+  <span class="rule">…,
+  <span class="attribute">advanced </span>:<span class="value"> { }</span></span></span>
+}
+</code></pre><p>위와 같이 기본적으로 <code>advanced:{}</code> 는 빈 객체가 지정되어 있는데 여기에 <code>codeStyle</code> 키에 값을 지정하면 된다.</p><pre><code class="json"><span class="rules">{
+  <span class="rule">…,
+  <span class="attribute">advanced</span>:<span class="value"> {
+    codeStyle: <span class="string">'solraized_dark'</span>
+  }</span></span></span>
+}
+</code></pre>
+<h2 id="toc_22">요약</h2>
+<p>구문 강조는 개발자 블로깅에 Must Have 아이템이 아닐 수 없다.  50개가 넘는 언어 지원과 30개에 육박하는 다양한 스타일 테마로 블로그 테마에 어울리고 페이지 성격에 걸맞는 스타일을 사용자가 원하는 데로 적용할 수 있다.</p><p>하루프레스를 이용하며 발생하는 문제나 좋은 아이디어들은 직접 fork 해 구현해도 좋고 아래 이슈 트래커에 언제든지 남겨주세요.</p>
+<ul>
+<li><a href="https://github.com/rhiokim/haroopress/issues">하루프레스 이슈트래커</a></li>
+</ul>
+
+<h2 id="toc_23">함께 보세요.</h2>
+
+<ul>
+<li>highlight.js : <a href="http://softwaremaniacs.org/soft/highlight/en/">http://softwaremaniacs.org/soft/highlight/en/</a></li>
+<li>marked : <a href="http://markedapp.com/help/">http://markedapp.com/help/</a></li>
+<li>Introduction to GFM : <a href="http://github.github.com/github-flavored-markdown/">http://github.github.com/github-flavored-markdown/</a>, <a href="http://dogfeet.github.com/articles/2012/dogfeet-flavored-markdown.html">한글</a></li>
+</ul>
+
+                        </div>
+                        <hr />
+                                            
+                        <div class="row-fluid">
+                            
+                            <div class="pull-right">
+                                <a href="/post/haroopress-default-data-format" class="btn btn-info">하루프레스의 기본 데이터 규약 <i class="icon-white icon-chevron-right"></i></a>
+                            </div>
+                            
+
+                            
+                            <div class="pull-left">
+                                <a href="/post/changelog-v0-dot-8-5" class="btn btn-info"><i class="icon-white icon-chevron-left"></i> changelog v0.8.5</a>
+                            </div>
+                            
+                        </div>
+                    
+
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+        </div>
+    </div>
+    <!--<div class="row">-->
+        <!--<div class="offset3 span9">-->
+            <!--<strong>tags</strong> :-->
+            <!---->
+        <!--</div>-->
+    <!--</div>-->
+</div><!-- /container -->
+
+
+        <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span12 ">
+                    <div class="well">
+                        <p class="pull-right"><a href="#">Back to top</a></p>
+                            <strong>haroopress</strong> developed by <a href="http://twitter.com/rhiokim" target="_blank">@rhiokim</a>,<a href="http://twitter.com/haroopress" target="_blank">@haroopress</a> and source in <a href="https://github.com/rhiokim/haroopress" target="_blank">github</a><br/>
+                            Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.<br />
+                            Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+
+
+</body>
+</html>

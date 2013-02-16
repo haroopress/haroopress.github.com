@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>하루프레스 환경설정 하기 |  하루프레스(Haroopress)</title>
+    <meta name="description" content="하루프레스는 개발자를 위한 블로그 엔진으로 웹서버와 데이터 베이스가 필요없이 마크다운(Markdown)으로 포스팅만하면 정적 페이지 방식으로 블로그를 자동으로 생성해줍니다.">
+    <meta name="author" content="Rhio Kim">
+    <meta name="keywords" content="haroopress,node.js,blog,wordpress,octopress" />
+    <meta name="generator" content="haroopress v0.9.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="/rss.xml" rel="alternate" title="하루프레스(Haroopress)" type="application/rss+xml">
+
+    <!-- Le styles -->
+    <link rel="canonical" href="http://haroopress.com">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/markdown.css" rel="stylesheet">
+    <link href="/css/haroopress.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <link href="/css/code/default.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-64.png">
+
+    <!-- Le javascript -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/apps/github.js"></script>
+    <script src="/js/apps/twitter.js"></script>
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+</head>
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+        <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+
+          <a class="pull-right" href="/rss.xml" onclick="_gaq.push(['_trackEvent', 'header', 'rss'])"><span class="icon-rss"></span></a>
+          
+
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li>
+                <a href="/" onclick="_gaq.push(['_trackEvent', 'header', 'home'])">Home</a>
+              </li>
+              <li>
+                <a href="/archives" onclick="_gaq.push(['_trackEvent', 'header', 'archives'])">Archives</a>
+              </li>
+              <li>
+                <a href="/slides" onclick="_gaq.push(['_trackEvent', 'header', 'slides'])">Slides</a>
+              </li>
+                
+                    <li>
+                      <a href="/about/" onclick="_gaq.push(['_trackEvent', 'header', '/about/'])">About</a>
+                    </li>
+                
+                    <li>
+                      <a href="/book/" onclick="_gaq.push(['_trackEvent', 'header', '/book/'])">Book</a>
+                    </li>
+                
+                    <li>
+                      <a href="/communities/" onclick="_gaq.push(['_trackEvent', 'header', '/communities/'])">커뮤니티</a>
+                    </li>
+                
+                    <li>
+                      <a href="/tutorial/" onclick="_gaq.push(['_trackEvent', 'header', '/tutorial/'])">튜토리얼</a>
+                    </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+<link href="/css/code/default.css" rel="stylesheet">
+<div class="container page-archive">
+    <div class="row">
+        <div class="span3">
+            <div id="author" class="well">
+                <div>
+                    <h3>About Author</h3>
+                    <ul class="thumbnails">
+                        <li>
+                            <a class="thumbnail">
+                                <img src="http://www.gravatar.com/avatar/0764d73c228492e36b339d8b6d7293ad?r=pg&amp;s=128.jpg&amp;d=identicon" />
+                            </a>
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>Rhio Kim</strong><br/>
+                        blog: <a href="http://rhio.tistory.com" target="_blank">http://rhio.tistory.com</a><br/>
+                        twitter: <a href="http://twitter.com/rhiokim" target="_blank">@rhiokim</a><br/>
+                        github: <a href="https://github.com/rhiokim" target="_blank">rhiokim</a>
+                    </p>
+                    <p>
+                        <a href="https://twitter.com/rhiokim" class="twitter-follow-button" data-show-count="true">Follow @rhiokim</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                    </p>
+                    <p>
+                        <p>자바스크립트를 좋아하는 인간입니다. </p>
+<ul>
+<li>Arduino</li>
+<li>Node.js</li>
+<li>HCI</li>
+</ul>
+
+                    </p>
+                </div>
+                <div>
+                    <h3>About this Article</h3>
+                    <p>
+                        <h5>Date Released:</h5>
+                        <span>Saturday, April 21 2012 1:50 PM</span>
+                    </p>
+                </div>
+            </div>
+                        <div class="well">
+                <ul class="nav nav-list">
+                    <li class="nav-header">Categories</li>
+                    <li class=""><a href="/category"><i class="icon-home"></i> Home</a></li>
+                    
+                    <li><a href="/category/haroopress"><i class="icon-book"></i> haroopress</a></li>
+                    
+                    <li><a href="/category/release"><i class="icon-book"></i> release</a></li>
+                    
+                    <li><a href="/category/tutorial"><i class="icon-book"></i> tutorial</a></li>
+                    
+                    <li><a href="/category/diary"><i class="icon-book"></i> diary</a></li>
+                    
+                </ul>
+            </div>
+
+            
+<div class="well">
+    <ul class="nav nav-list">
+        <li class="nav-header">Recent Articles</li>
+    
+        <li>
+            <a href="/post/2013-haroopress-plan" target="_blank">2013 하루프레스 계획
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+        <li>
+            <a href="/post/haroopress-v0-dot-9-2-release" target="_blank">하루프레스 v0.9.2 회고 및 릴리즈 노트
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+        <li>
+            <a href="/post/haroopress-install-requirements" target="_blank">하루프레스 설치 요구 사항 및 설치
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+        <li>
+            <a href="/post/haroopress-in-playnode-conference-2012" target="_blank">하루프레스 in #playnode conference 2012
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+        <li>
+            <a href="/post/support-plugins" target="_blank">하루프레스 확장 마크다운
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+    </ul>
+</div>
+
+        </div>
+        <div class="span9">
+            <div class="row">
+                <div class="span9">
+                    <div class="well bg">
+                        <div class="pull-right bookmark"></div>
+                        <div class="page-header">
+                            <h1>하루프레스 환경설정 하기</h1>
+                        </div>
+
+                        <div class="pull-right social-area">
+                            
+                            
+
+                            
+                        </div>
+
+                        <div class="markdown-wrapper">
+                            <h2 id="toc_160">config.js</h2>
+<p>먼저 하루프레스의 환경설정 파일인 config.js 는 굉장히 중요합니다.</p>
+<h3 id="toc_161">config.js 구성</h3>
+<p>환경설정 파일을 열어보면 다음과 같은 JSON 포맷의 내용을 볼 수 있습니다.</p><pre><code class="js">var conf = {
+    meta: {}
+}<span class="comment">;</span>
+
+conf<span class="preprocessor">.theme</span> = {
+}<span class="comment">;</span>
+
+conf<span class="preprocessor">.plugins</span> = {
+}<span class="comment">;</span>
+
+module<span class="preprocessor">.exports</span> = conf<span class="comment">;</span>
+</code></pre><p>위의 JSON 의 구성을 하나하나 살펴보겠습니다.</p><p>먼저 굳이 설명할 필요 없는  <code>conf</code> 는 모든 환경설정을 담는 객체 변수입니다. </p><pre><code class="js"><span class="title">var</span> conf = {
+}
+</code></pre><p>다음은 기본 사이트 구성정보를 담고 있는 <code>meta: {}</code> 는 메타정보를 담고 있습니다.
+모든 페이지에서 적용되기 때문에 하루프레스를 초기화 시 필수적으로 설정해야할 정보입니다.</p><pre><code class="js"><span class="keyword">var</span> conf = {
+    meta: {}
+}
+</code></pre><p>다음 테마 정보입니다.
+하루프레스에서 제공하는 테마는 현재 딱 두가지입니다. <code>basic</code>와 <code>wood</code> 입니다. 
+원하는 테마명을 지정해주면 됩니다. 테마는 <code>source/theme</code> 디렉토리에 있는 폴더명과 매칭됩니다. </p><pre><code class="js"><span class="transposed_variable">conf.</span>theme = <span class="cell">{
+    name: <span class="string">'basic'</span>
+}</span>;
+</code></pre><p>다음은 하루프레스를 더 멋지게 사용하기 위한 다양한 플러그인을 관리하는 설정값들입니다.
+만약 <code>github</code> 저장소 목록 플러그인을 사용하고 싶다면 <code>conf.plugins.github</code> 의 설정값들을 조절해주면 됩니다.</p><pre><code class="js">conf<span class="preprocessor">.plugins</span> = {
+    github: {}
+}<span class="comment">;</span>
+</code></pre><p>간단히 <code>config.js</code> 의 구성에 대해서 알아보았습니다. 이 파일을 하루프레스가 동작하기 위한 필수 설정 파일이기 때문에
+설정 값들에 대해서 명확히 이해한 후에 값들을 설정하기를 권장드립니다.</p>
+<h2 id="toc_162">자세히 알아보는 설정 값</h2>
+<pre><code class="js">var conf = {
+    <span class="method">meta:</span> {
+        <span class="method">version:</span> <span class="string">'0.8.0'</span>,
+        <span class="method">defaultTitle:</span> <span class="string">'haroopress'</span>,
+        <span class="method">description:</span> <span class="string">'Static Page Blog engine based Node.js'</span>,
+        <span class="method">siteUrl:</span> <span class="string">'http://haroopress.github.com'</span>,
+        <span class="method">author:</span> <span class="string">'Rhio Kim'</span>,
+        <span class="method">keywords:</span> [ <span class="string">'node.js'</span>, <span class="string">'javascript'</span>, <span class="string">'html5'</span>javascript ]
+    },
+
+    <span class="method">sourceDir:</span> __dirname + <span class="string">'/source'</span>,
+    <span class="method">publicDir:</span> __dirname + <span class="string">'/_public'</span>,
+    <span class="method">deployDir:</span> __dirname + <span class="string">'/_deploy'</span>,
+    <span class="method">themeDir:</span> __dirname + <span class="string">'/source/themes'</span>,
+
+    <span class="method">lang:</span> <span class="string">'en'</span>,
+    <span class="method">contentLength:</span> <span class="number">6</span>,
+    <span class="method">deployBranch:</span> <span class="string">'gh-pages'</span>,
+    <span class="class">CNAME</span>: <span class="string">''</span>
+};
+
+conf.theme = {
+    <span class="method">name:</span> <span class="string">'basic'</span>
+};
+
+conf.plugins = {
+    <span class="method">github:</span> {
+        <span class="method">display:</span> <span class="keyword">false</span>,
+        <span class="method">user:</span> <span class="string">'[your github.com account]'</span>,
+        <span class="method">repoCount:</span> <span class="number">0</span>,       //if <span class="number">0</span> is all else display count
+        <span class="method">profileLink:</span> <span class="keyword">true</span>,
+        <span class="method">skipForks:</span> <span class="keyword">true</span>
+    },
+    <span class="method">twitter:</span> {
+        <span class="method">display:</span> <span class="keyword">false</span>,
+        <span class="method">user:</span> <span class="string">'[your twitter account'</span>,
+        <span class="method">tweetCount:</span> <span class="number">10</span>,
+        <span class="method">showReplies:</span> <span class="keyword">false</span>,
+        <span class="method">followerButton:</span> <span class="keyword">true</span>,
+        <span class="method">showFollowerCount:</span> <span class="keyword">false</span>,
+        <span class="method">tweetButton:</span> <span class="keyword">true</span>
+    },
+    <span class="method">google:</span> {
+        <span class="method">display:</span> <span class="keyword">false</span>,
+        <span class="method">googleAnalyticsId:</span> <span class="string">'[your tracking id eg. UA-123445678-2]'</span>,  //google analytics tracking id, default <span class="keyword">false</span>
+        <span class="method">googlePlus:</span> <span class="keyword">true</span>,
+        <span class="method">googlePlusSize:</span> <span class="string">'medium'</span>,
+        <span class="method">gplus:</span> {
+            <span class="method">display:</span> <span class="keyword">false</span>,
+            <span class="method">user:</span> <span class="string">'[your google plus account'</span>
+        }
+    },
+    <span class="method">disqus:</span> {
+        <span class="method">display:</span> <span class="keyword">false</span>,
+        <span class="method">shortName:</span> <span class="string">'[disqus short name]'</span>,
+        <span class="method">showCommentCount:</span> <span class="keyword">true</span>
+    },
+    <span class="method">facebook:</span> {
+        <span class="method">display:</span> <span class="keyword">false</span>,
+        <span class="method">user:</span> <span class="string">'[your facebook account]'</span>,
+        <span class="method">showSiteLink:</span> <span class="keyword">true</span>,
+        <span class="method">showLikeButton:</span> <span class="keyword">true</span>
+    },
+    <span class="method">delicious:</span> {},
+    <span class="method">contributors:</span> {
+        <span class="method">display:</span> <span class="keyword">true</span>
+    },
+    <span class="method">weather:</span> {
+        <span class="method">display:</span> <span class="keyword">false</span>,
+        <span class="method">delay:</span> <span class="number">0</span>,
+        <span class="method">zipcode:</span> <span class="string">'[your zipcode eg. KSXX0037]'</span>
+    }
+};
+
+module.exports = conf;
+</code></pre>
+                        </div>
+                        <hr />
+                                            
+                        <div class="row-fluid">
+                            
+                            <div class="pull-right">
+                                <a href="/post/harupeureseu-myeongryeongjul-dogu-dijain" class="btn btn-info">하루프레스  명령줄 도구 디자인 <i class="icon-white icon-chevron-right"></i></a>
+                            </div>
+                            
+
+                            
+                            <div class="pull-left">
+                                <a href="/post/harupeureseu-gaebal-rodeumaeb" class="btn btn-info"><i class="icon-white icon-chevron-left"></i> 하루프레스 개발 로드맵</a>
+                            </div>
+                            
+                        </div>
+                    
+
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+        </div>
+    </div>
+    <!--<div class="row">-->
+        <!--<div class="offset3 span9">-->
+            <!--<strong>tags</strong> :-->
+            <!---->
+            <!--<a href="/tag/haroopress">haroopress</a>&nbsp;-->
+            <!---->
+            <!--<a href="/tag/tutorial">tutorial</a>&nbsp;-->
+            <!---->
+        <!--</div>-->
+    <!--</div>-->
+</div><!-- /container -->
+
+
+        <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span12 ">
+                    <div class="well">
+                        <p class="pull-right"><a href="#">Back to top</a></p>
+                            <strong>haroopress</strong> developed by <a href="http://twitter.com/rhiokim" target="_blank">@rhiokim</a>,<a href="http://twitter.com/haroopress" target="_blank">@haroopress</a> and source in <a href="https://github.com/rhiokim/haroopress" target="_blank">github</a><br/>
+                            Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.<br />
+                            Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+
+
+</body>
+</html>

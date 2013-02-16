@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>하루프레스 확장 마크다운 |  하루프레스(Haroopress)</title>
+    <meta name="description" content="하루프레스는 개발자를 위한 블로그 엔진으로 웹서버와 데이터 베이스가 필요없이 마크다운(Markdown)으로 포스팅만하면 정적 페이지 방식으로 블로그를 자동으로 생성해줍니다.">
+    <meta name="author" content="Rhio Kim">
+    <meta name="keywords" content="haroopress,node.js,blog,wordpress,octopress" />
+    <meta name="generator" content="haroopress v0.9.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="/rss.xml" rel="alternate" title="하루프레스(Haroopress)" type="application/rss+xml">
+
+    <!-- Le styles -->
+    <link rel="canonical" href="http://haroopress.com">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/markdown.css" rel="stylesheet">
+    <link href="/css/haroopress.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <link href="/css/code/default.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-64.png">
+
+    <!-- Le javascript -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/apps/github.js"></script>
+    <script src="/js/apps/twitter.js"></script>
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+</head>
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+        <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+
+          <a class="pull-right" href="/rss.xml" onclick="_gaq.push(['_trackEvent', 'header', 'rss'])"><span class="icon-rss"></span></a>
+          
+
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li>
+                <a href="/" onclick="_gaq.push(['_trackEvent', 'header', 'home'])">Home</a>
+              </li>
+              <li>
+                <a href="/archives" onclick="_gaq.push(['_trackEvent', 'header', 'archives'])">Archives</a>
+              </li>
+              <li>
+                <a href="/slides" onclick="_gaq.push(['_trackEvent', 'header', 'slides'])">Slides</a>
+              </li>
+                
+                    <li>
+                      <a href="/about/" onclick="_gaq.push(['_trackEvent', 'header', '/about/'])">About</a>
+                    </li>
+                
+                    <li>
+                      <a href="/book/" onclick="_gaq.push(['_trackEvent', 'header', '/book/'])">Book</a>
+                    </li>
+                
+                    <li>
+                      <a href="/communities/" onclick="_gaq.push(['_trackEvent', 'header', '/communities/'])">커뮤니티</a>
+                    </li>
+                
+                    <li>
+                      <a href="/tutorial/" onclick="_gaq.push(['_trackEvent', 'header', '/tutorial/'])">튜토리얼</a>
+                    </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+<link href="/css/code/default.css" rel="stylesheet">
+<div class="container page-archive">
+    <div class="row">
+        <div class="span3">
+            <div id="author" class="well">
+                <div>
+                    <h3>About Author</h3>
+                    <ul class="thumbnails">
+                        <li>
+                            <a class="thumbnail">
+                                <img src="http://www.gravatar.com/avatar/0764d73c228492e36b339d8b6d7293ad?r=pg&amp;s=128.jpg&amp;d=identicon" />
+                            </a>
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>Rhio Kim</strong><br/>
+                        blog: <a href="http://rhio.tistory.com" target="_blank">http://rhio.tistory.com</a><br/>
+                        twitter: <a href="http://twitter.com/rhiokim" target="_blank">@rhiokim</a><br/>
+                        github: <a href="https://github.com/rhiokim" target="_blank">rhiokim</a>
+                    </p>
+                    <p>
+                        <a href="https://twitter.com/rhiokim" class="twitter-follow-button" data-show-count="true">Follow @rhiokim</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                    </p>
+                    <p>
+                        <p>자바스크립트를 좋아하는 인간입니다. </p>
+<ul>
+<li>Arduino</li>
+<li>Node.js</li>
+<li>HCI</li>
+</ul>
+
+                    </p>
+                </div>
+                <div>
+                    <h3>About this Article</h3>
+                    <p>
+                        <h5>Date Released:</h5>
+                        <span>Saturday, November 17 2012 3:47 PM</span>
+                    </p>
+                </div>
+            </div>
+                        <div class="well">
+                <ul class="nav nav-list">
+                    <li class="nav-header">Categories</li>
+                    <li class=""><a href="/category"><i class="icon-home"></i> Home</a></li>
+                    
+                    <li><a href="/category/haroopress"><i class="icon-book"></i> haroopress</a></li>
+                    
+                    <li><a href="/category/release"><i class="icon-book"></i> release</a></li>
+                    
+                    <li><a href="/category/tutorial"><i class="icon-book"></i> tutorial</a></li>
+                    
+                    <li><a href="/category/diary"><i class="icon-book"></i> diary</a></li>
+                    
+                </ul>
+            </div>
+
+            
+<div class="well">
+    <ul class="nav nav-list">
+        <li class="nav-header">Recent Articles</li>
+    
+        <li>
+            <a href="/post/2013-haroopress-plan" target="_blank">2013 하루프레스 계획
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+        <li>
+            <a href="/post/haroopress-v0-dot-9-2-release" target="_blank">하루프레스 v0.9.2 회고 및 릴리즈 노트
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+        <li>
+            <a href="/post/haroopress-install-requirements" target="_blank">하루프레스 설치 요구 사항 및 설치
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+        <li>
+            <a href="/post/haroopress-in-playnode-conference-2012" target="_blank">하루프레스 in #playnode conference 2012
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+        <li>
+            <a href="/post/support-plugins" target="_blank">하루프레스 확장 마크다운
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+    </ul>
+</div>
+
+        </div>
+        <div class="span9">
+            <div class="row">
+                <div class="span9">
+                    <div class="well bg">
+                        
+                        <div class="page-header">
+                            <h1>하루프레스 확장 마크다운</h1>
+                        </div>
+
+                        <div class="pull-right social-area">
+                            
+                            
+
+                            
+                        </div>
+
+                        <div class="markdown-wrapper">
+                            <h4 id="toc_196">Youtube</h4>
+<p><strong>markdown</strong></p><pre><code class="markdown">[youtube:key [width] [height]]
+</code></pre><p><strong>becomes</strong></p><p><iframe class="youtube" width="560px" height="315px" src="https://www.youtube.com/embed/9bZkp7q19f0" frameborder="0" allowfullscreen></iframe><br/></p><p>위와 같이 동영상을 첨부할 수 있게 된다. 현재까지는 조금 부족한 상태이다. 좀더 개선된 시점에 플러그인 기능은 별도의 글로 소개할 예정이다.</p><p><strong>width, height 값 설정</strong></p><pre><code class="markdown">[youtube:MCEcWcIww5k <span class="number">100</span>% <span class="number">215</span>px]
+[youtube:<span class="number">9</span>bZkp7q19f0 <span class="number">516</span>px]
+[youtube:QlWZluzBNxM <span class="number">300</span>px <span class="number">500</span>px]
+</code></pre><p><strong>becomes</strong></p><p><iframe class="youtube" width="100%" height="215px" src="https://www.youtube.com/embed/MCEcWcIww5k" frameborder="0" allowfullscreen></iframe><br/></p><p><iframe class="youtube" width="516px" height="315px" src="https://www.youtube.com/embed/9bZkp7q19f0" frameborder="0" allowfullscreen></iframe><br/></p><p><iframe class="youtube" width="300px" height="500px" src="https://www.youtube.com/embed/QlWZluzBNxM" frameborder="0" allowfullscreen></iframe><br/></p>
+<h4 id="toc_197">jsfiddle</h4>
+<p><strong>markdown</strong></p><pre><code class="markdown">[jsfiddle:key]
+[jsfiddle:key [tab] [skin] [height] [width]]
+</code></pre><p><strong>becomes</strong></p><p><iframe style="width:100%; height:300px" src="http://jsfiddle.net/ccWP7/embedded/js,resources,html,css,result/light/"></iframe></p><p><strong>탭 지정</strong></p><p><iframe style="width:100%; height:300px" src="http://jsfiddle.net/ccWP7/embedded/result,js,html,css/light/"></iframe></p><p><iframe style="width:100%; height:300px" src="http://jsfiddle.net/ccWP7/embedded/js,resources,html,css,result/presentation/"></iframe></p><p><iframe style="width:450px; height:300px" src="http://jsfiddle.net/ccWP7/embedded/js,resources,html,css,result/presentation/"></iframe></p>
+<h4 id="toc_198">tweet</h4>
+<p>트위터의 사용이 잦아지면서 포스팅에 트위터 내용을 첨부하고 싶은 경우가 자주 있다.  하루프레스는 트윗 <code>237213915593965568</code> 형태의 트윗 코드만 알면된다. 
+그리고 아래의 플러그인 코드를 이용해 포스팅에 트윗 내용을 첨부해보세요.</p><p><strong>markdown</strong></p><pre><code class="markdown">[tweet:<span class="number">237213915593965568</span>]
+</code></pre><p><strong>becomes</strong></p><p><blockquote class="twitter-tweet "><p> ^TS</p>&mdash; (@) <a href="https://twitter.com/twitterapi/status/237213915593965568" data-datetime=""></a></blockquote><div style="clear:both;"></div></p><p><strong>example</strong></p><pre><code class="markdown">[tweet:<span class="number">237213915593965568</span>]
+[tweet:<span class="number">237213915593965568</span> center]
+[tweet:<span class="number">237213915593965568</span> right]
+</code></pre><p><strong>왼쪽 정렬</strong></p><p><blockquote class="twitter-tweet "><p> ^TS</p>&mdash; (@) <a href="https://twitter.com/twitterapi/status/250113357066158080" data-datetime=""></a></blockquote><div style="clear:both;"></div></p><p><strong>가운데 정렬</strong></p><p><blockquote class="twitter-tweet tw-align-center"><p> ^TS</p>&mdash; (@) <a href="https://twitter.com/twitterapi/status/266928743946268674" data-datetime=""></a></blockquote><div style="clear:both;"></div></p><p><strong>오른쪽 정렬</strong></p><p><blockquote class="twitter-tweet tw-align-right"><p> ^TS</p>&mdash; (@) <a href="https://twitter.com/twitterapi/status/267593051986350080" data-datetime=""></a></blockquote><div style="clear:both;"></div></p>
+<h3 id="toc_199">gist</h3>
+<p>Github.com 의 gist 를 블로그 포스팅에서 포함시킬 수 있는 플러그인입니다.</p>
+<ul>
+<li><a href="https://gist.github.com/4094468">https://gist.github.com/4094468</a></li>
+</ul>
+<p><strong>markdown</strong></p><pre><code class="markdown">[gist:<span class="number">4094468</span>]
+</code></pre><p><strong>become</strong></p><p><script src=https://gist.github.com/4094468.js?file=undefined></script><noscript><pre><code>#{code}</code></pre></noscript></p>
+<h3 id="toc_200">vimeo</h3>
+<p><strong>markdown</strong></p><p><strong>become</strong>
+[vimeo:53157569]</p>
+<h3 id="toc_201">pdf</h3>
+<p><strong>pdf</strong></p><p><strong>become</strong>
+[pdf:clock.co.uk/downloads/ten-reasons-to-use-nodejs.pdf]</p>
+                        </div>
+                        <hr />
+                                            
+                        <div class="row-fluid">
+                            
+                            <div class="pull-right">
+                                <a href="/post/welcome-to-haroopress" class="btn btn-info">Welcome to haroopress <i class="icon-white icon-chevron-right"></i></a>
+                            </div>
+                            
+
+                            
+                            <div class="pull-left">
+                                <a href="/post/opensource-with-haroopress" class="btn btn-info"><i class="icon-white icon-chevron-left"></i> 하루프레스에 포함된 오픈소스들</a>
+                            </div>
+                            
+                        </div>
+                    
+
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+        </div>
+    </div>
+    <!--<div class="row">-->
+        <!--<div class="offset3 span9">-->
+            <!--<strong>tags</strong> :-->
+            <!---->
+        <!--</div>-->
+    <!--</div>-->
+</div><!-- /container -->
+
+
+        <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span12 ">
+                    <div class="well">
+                        <p class="pull-right"><a href="#">Back to top</a></p>
+                            <strong>haroopress</strong> developed by <a href="http://twitter.com/rhiokim" target="_blank">@rhiokim</a>,<a href="http://twitter.com/haroopress" target="_blank">@haroopress</a> and source in <a href="https://github.com/rhiokim/haroopress" target="_blank">github</a><br/>
+                            Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.<br />
+                            Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+
+
+</body>
+</html>

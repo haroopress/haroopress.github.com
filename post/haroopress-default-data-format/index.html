@@ -152,6 +152,11 @@
         <li class="nav-header">Recent Articles</li>
     
         <li>
+            <a href="/post/gravatar-image" target="_blank">gravatar image
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+        <li>
             <a href="/post/2013-haroopress-plan" target="_blank">2013 하루프레스 계획
             <span class="label">Rhio Kim</span></a>
         </li>
@@ -168,11 +173,6 @@
     
         <li>
             <a href="/post/haroopress-in-playnode-conference-2012" target="_blank">하루프레스 in #playnode conference 2012
-            <span class="label">Rhio Kim</span></a>
-        </li>
-    
-        <li>
-            <a href="/post/support-plugins" target="_blank">하루프레스 확장 마크다운
             <span class="label">Rhio Kim</span></a>
         </li>
     
@@ -200,16 +200,16 @@
                             <p>이 문서는 하루프레스를 이용하기 위한 블로그 글, 페이지, 작성자 정보등을 다루기 위한 데이터 포맷에 대해 정의합니다.
 cli 명령을 제공하기 때문에 헤더 정보를 직접 생성하는 경우는 거의 없으나 상황에 따라 수정 편집해야 하는 경우가 발생하기 때문에
 기본 포맷의 구조에 대해서 <strong>꼭</strong> 알아두는게 좋습니다.</p>
-<h3 id="toc_26">데이터 포맷 소개</h3>
+<h3 id="toc_32">데이터 포맷 소개</h3>
 <p>하루프레스의 사용자 생성 데이터는 모두 <strong>JSON</strong> 과 <strong>Markdown</strong> 으로만 이루어집니다.</p>
-<h4 id="toc_27">포스팅</h4>
+<h4 id="toc_33">포스팅</h4>
 <p>블로그 포스팅 데이터는 두 가지로 분리됩니다.</p><pre><code class=""><span class="rules">{
   <span class="rule">헤더
 }</span></span>
 
 내용
 </code></pre>
-<h5 id="toc_28">포스팅 기본 포맷</h5>
+<h5 id="toc_34">포스팅 기본 포맷</h5>
 <pre><code class="js">{
     <span class="string">"title"</span>: <span class="string">"하루프레스 데이터 포맷 소개"</span>,    <span class="regexp">//</span>블로그 제목
     <span class="string">"author"</span>: <span class="string">"Rhio kim"</span>,                  <span class="regexp">//</span>작성자
@@ -229,14 +229,14 @@ cli 명령을 제공하기 때문에 헤더 정보를 직접 생성하는 경우
 <span class="regexp">//</span>여기부터는 내용 영역
 ...
 </code></pre>
-<h4 id="toc_29">페이지</h4>
+<h4 id="toc_35">페이지</h4>
 <p>블로그 페이지 데이터는 포스팅과 동일하게 두가지로 분리됩니다.</p><pre><code class=""><span class="rules">{
   <span class="rule">헤더
 }</span></span>
 
 내용
 </code></pre>
-<h5 id="toc_30">포스팅 기본 포맷</h5>
+<h5 id="toc_36">포스팅 기본 포맷</h5>
 <pre><code class="js">{
     <span class="string">"title"</span>: <span class="string">"하루프레스 데이터 포맷 소개"</span>,    <span class="regexp">//</span>블로그 제목
     <span class="string">"author"</span>: <span class="string">"Rhio kim"</span>,                  <span class="regexp">//</span>작성자
@@ -258,7 +258,7 @@ cli 명령을 제공하기 때문에 헤더 정보를 직접 생성하는 경우
 <span class="regexp">//</span>여기부터는 내용 영역
 ...
 </code></pre>
-<h4 id="toc_31">작성자</h4>
+<h4 id="toc_37">작성자</h4>
 <p>작성자의 경우 포스팅이나 페이지의 헤더 영역의 저작자(author) 필드와 파일명이 매칭이 되기 때문에 파일명은 굉장히 중요합니다.</p><pre><code class="js">{
  <span class="keyword">...</span>,
  <span class="string">"author"</span>: <span class="string">"Rhio kim"</span>,
@@ -272,7 +272,7 @@ cli 명령을 제공하기 때문에 헤더 정보를 직접 생성하는 경우
 
 내용
 </code></pre>
-<h5 id="toc_32">포스팅 기본 포맷</h5>
+<h5 id="toc_38">포스팅 기본 포맷</h5>
 <pre><code class="js">{
     <span class="string">"name"</span>: <span class="string">"작성자 이름"</span>,
     <span class="string">"blog"</span>: <span class="string">"http://haroopress.github.com"</span>,
@@ -307,7 +307,7 @@ cli 명령을 제공하기 때문에 헤더 정보를 직접 생성하는 경우
 
                             
                             <div class="pull-left">
-                                <a href="/post/fenced-code-block" class="btn btn-info"><i class="icon-white icon-chevron-left"></i> 구문 강조를 위한 펜스 코드 블럭(fenced code block)</a>
+                                <a href="/post/gravatar-image" class="btn btn-info"><i class="icon-white icon-chevron-left"></i> gravatar image</a>
                             </div>
                             
                         </div>

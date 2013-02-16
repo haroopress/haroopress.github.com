@@ -152,6 +152,11 @@
         <li class="nav-header">Recent Articles</li>
     
         <li>
+            <a href="/post/gravatar-image" target="_blank">gravatar image
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+        <li>
             <a href="/post/2013-haroopress-plan" target="_blank">2013 하루프레스 계획
             <span class="label">Rhio Kim</span></a>
         </li>
@@ -168,11 +173,6 @@
     
         <li>
             <a href="/post/haroopress-in-playnode-conference-2012" target="_blank">하루프레스 in #playnode conference 2012
-            <span class="label">Rhio Kim</span></a>
-        </li>
-    
-        <li>
-            <a href="/post/support-plugins" target="_blank">하루프레스 확장 마크다운
             <span class="label">Rhio Kim</span></a>
         </li>
     
@@ -198,12 +198,12 @@
 
                         <div class="markdown-wrapper">
                             <p>새로운 기능 소개에서는 <em class="label label-warning"><strong>Experimental: 1</strong></em>, <em class="label label-success"><strong> Stablity: 3</strong></em> 으로 나뉘어 설명할 예정입니다.  <em class="label label-success"><strong>안정</strong></em> 상태인 기능은 변경이 없는 안정화된 버젼을 가리키며 <em class="label label-warning"><strong>실험</strong></em> 상태의 기능은 다소 변경될 수 있는 기능을 의미합니다.</p>
-<h2 id="toc_98">전형적인 마크다운보다 개선된 점</h2>
+<h2 id="toc_104">전형적인 마크다운보다 개선된 점</h2>
 
 <blockquote>
 <p><em class="label label-success"><strong>Stability: 3 - Stable</strong></em></p></blockquote>
 <p>표준 마크다운 문법보다 좀더 나은 문서 표현을 위해 확장된 문서 포맷으로 <strong>멀티 마크다운</strong> 이라는 문법도 존재한다.</p><p>v0.9 에서는 멀티 마크다운의 일부 인 <strong>테이블 기능</strong>, <strong>자동 링크</strong>, <strong>펜스 코드 블럭</strong>(Fenced Code Block) 그리고 <strong>강조구문</strong>(Triple Emphasis) 을 제공할 예정이다.</p><p>그리고 커스텀 문법을 이용한 <strong>플러그인 기능</strong>을 추가 할 예정입니다.</p>
-<h3 id="toc_99">테이블 기능</h3>
+<h3 id="toc_105">테이블 기능</h3>
 <p><strong>markdown</strong></p><pre><code class="markdown"><span class="comment">column</span> <span class="comment">|</span> <span class="comment">column</span>
 <span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="comment">|</span> <span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span>
  <span class="comment">row</span> <span class="comment">1</span> <span class="comment">|</span> <span class="comment">row1</span>
@@ -225,7 +225,7 @@
 </tr>
 </tbody></table>
 
-<h3 id="toc_100">URL 자동 링크</h3>
+<h3 id="toc_106">URL 자동 링크</h3>
 
 <blockquote>
 <p><em class="label label-success"><strong>Stability: 3 - Stable</strong></em></p></blockquote>
@@ -241,7 +241,7 @@
 <li>mailto:<a href="mailto:abc123@gmail.com">abc123@gmail.com</a></li>
 </ul>
 
-<h3 id="toc_101">펜스 코드블럭</h3>
+<h3 id="toc_107">펜스 코드블럭</h3>
 
 <blockquote>
 <p><em class="label label-success"><strong>Stability: 3 - Stable</strong></em></p></blockquote>
@@ -260,7 +260,7 @@ function syntaxHighlight() {
    console.log(s);
 }
 </code></pre>
-<h3 id="toc_102">트리플 강조구문</h3>
+<h3 id="toc_108">트리플 강조구문</h3>
 
 <blockquote>
 <p><em class="label label-success"><strong>Stability: 3 - Stable</strong></em></p><p><em class="label label-important"><strong><i class="icon-info-sign icon-white"></i> 트리플 강조 구문은 처음 박스 형태로 제공하려 하였으나 표준에 어긋나 본래의 형태로 처리함.  2012.10.11 변경</strong></em></p></blockquote>
@@ -299,20 +299,20 @@ function syntaxHighlight() {
 <li>트위터 부트스트랩 아이콘 : <a href="http://twitter.github.com/bootstrap/base-css.html#icons">http://twitter.github.com/bootstrap/base-css.html#icons</a></li>
 </ul>
 
-<h2 id="toc_103">플러그인을 위한 커스텀 문법</h2>
+<h2 id="toc_109">플러그인을 위한 커스텀 문법</h2>
 
 <blockquote>
 <p><em class="label label-warning"><strong>Stability: 3 - Experimental</strong></em></p><p><em class="label label-important"><strong>이 기능은 현재 구현 및 테스트 중입니다. 그래서 커스텀 문법의 구조가 언제든지 변경될 수 있다는 점 참고바랍니다.</strong></em></p></blockquote>
 <p>전형적인 마크다운만으로는 복잡한 문서 표현의 한계가 있다. 그래서 멀티 마크다운을 통해 좀더 복잡한 문서 구조를 표현할 수 있게 되었고 여기에 더불어 복잡한 미디어 컨텐츠와 오픈 컨텐츠를 웹 페이지에 표현하기 위한 커스텀 문법을 제공한다.</p><p>하루프레스도 마크다운을 기반으로 오픈된 웹 컨텐츠들을 문서에 손쉽게 첨부할 수 있도록 커스텀 문법을 제공하려 연구중에 있다.</p><p>작성하고 있는 마크다운 문서에 유투브 동영상을 첨부하고 싶은 사용자에게는 다음과 같은 문법을 사용하면 된다.</p>
-<h4 id="toc_104">Youtube</h4>
+<h4 id="toc_110">Youtube</h4>
 <p><strong>markdown</strong></p>
 <pre><code class="markdown">[youtube:9bZkp7q19f0]</code></pre>
 <p><strong>becomes</strong></p><p><iframe class="youtube" width="560px" height="315px" src="https://www.youtube.com/embed/9bZkp7q19f0" frameborder="0" allowfullscreen></iframe><br/></p><p>위와 같이 동영상을 첨부할 수 있게 된다. 현재까지는 조금 부족한 상태이다. 좀더 개선된 시점에 플러그인 기능은 별도의 글로 소개할 예정이다.</p>
-<h4 id="toc_105">jsfiddle</h4>
+<h4 id="toc_111">jsfiddle</h4>
 <p><strong>markdown</strong></p>
 <pre><code class="markdown">[jsfiddle:ccWP7]</code></pre>
 <p><strong>becomes</strong></p><p><iframe style="width:100%; height:300px" src="http://jsfiddle.net/ccWP7/embedded/js,resources,html,css,result/light/"></iframe></p>
-<h4 id="toc_106">tweet</h4>
+<h4 id="toc_112">tweet</h4>
 <p>트위터의 사용이 잦아지면서 포스팅에 트위터 내용을 첨부하고 싶은 경우가 자주 있다.  하루프레스는 트윗 <code>237213915593965568</code> 형태의 트윗 코드만 알면된다. 
 그리고 아래의 플러그인 코드를 이용해 포스팅에 트윗 내용을 첨부해보세요.</p><p><strong>markdown</strong></p>
 <pre><code class="markdown">[tweet:237213915593965568]</code></pre>
@@ -322,7 +322,7 @@ function syntaxHighlight() {
 [tweet:237213915593965568 right]
 </code></pre>
 <p><strong>left</strong></p><p><blockquote class="twitter-tweet "><p> ^TS</p>&mdash; (@) <a href="https://twitter.com/twitterapi/status/237213915593965568" data-datetime=""></a></blockquote><div style="clear:both;"></div></p><p><strong>center</strong></p><p><blockquote class="twitter-tweet tw-align-center"><p> ^TS</p>&mdash; (@) <a href="https://twitter.com/twitterapi/status/237213915593965568" data-datetime=""></a></blockquote><div style="clear:both;"></div></p><p><strong>right</strong></p><p><blockquote class="twitter-tweet tw-align-right"><p> ^TS</p>&mdash; (@) <a href="https://twitter.com/twitterapi/status/237213915593965568" data-datetime=""></a></blockquote><div style="clear:both;"></div></p>
-<h3 id="toc_107">플러그인 옵션</h3>
+<h3 id="toc_113">플러그인 옵션</h3>
 <p>현재 위의 두가지 플러그인만 v0.9.0 버젼에서 제공될 예정이고 v0.9.x 버젼동안 다음과 같은 플러그인들을 추가로 제공할 예정이다.</p>
 <ul>
 <li>vimeo</li>

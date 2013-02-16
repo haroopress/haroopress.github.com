@@ -152,6 +152,11 @@
         <li class="nav-header">Recent Articles</li>
     
         <li>
+            <a href="/post/gravatar-image" target="_blank">gravatar image
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+        <li>
             <a href="/post/2013-haroopress-plan" target="_blank">2013 하루프레스 계획
             <span class="label">Rhio Kim</span></a>
         </li>
@@ -168,11 +173,6 @@
     
         <li>
             <a href="/post/haroopress-in-playnode-conference-2012" target="_blank">하루프레스 in #playnode conference 2012
-            <span class="label">Rhio Kim</span></a>
-        </li>
-    
-        <li>
-            <a href="/post/support-plugins" target="_blank">하루프레스 확장 마크다운
             <span class="label">Rhio Kim</span></a>
         </li>
     
@@ -197,34 +197,34 @@
                         </div>
 
                         <div class="markdown-wrapper">
-                            <h4 id="toc_196">Youtube</h4>
+                            <h4 id="toc_202">Youtube</h4>
 <p><strong>markdown</strong></p><pre><code class="markdown">[youtube:key [width] [height]]
 </code></pre><p><strong>becomes</strong></p><p><iframe class="youtube" width="560px" height="315px" src="https://www.youtube.com/embed/9bZkp7q19f0" frameborder="0" allowfullscreen></iframe><br/></p><p>위와 같이 동영상을 첨부할 수 있게 된다. 현재까지는 조금 부족한 상태이다. 좀더 개선된 시점에 플러그인 기능은 별도의 글로 소개할 예정이다.</p><p><strong>width, height 값 설정</strong></p><pre><code class="markdown">[youtube:MCEcWcIww5k <span class="number">100</span>% <span class="number">215</span>px]
 [youtube:<span class="number">9</span>bZkp7q19f0 <span class="number">516</span>px]
 [youtube:QlWZluzBNxM <span class="number">300</span>px <span class="number">500</span>px]
 </code></pre><p><strong>becomes</strong></p><p><iframe class="youtube" width="100%" height="215px" src="https://www.youtube.com/embed/MCEcWcIww5k" frameborder="0" allowfullscreen></iframe><br/></p><p><iframe class="youtube" width="516px" height="315px" src="https://www.youtube.com/embed/9bZkp7q19f0" frameborder="0" allowfullscreen></iframe><br/></p><p><iframe class="youtube" width="300px" height="500px" src="https://www.youtube.com/embed/QlWZluzBNxM" frameborder="0" allowfullscreen></iframe><br/></p>
-<h4 id="toc_197">jsfiddle</h4>
+<h4 id="toc_203">jsfiddle</h4>
 <p><strong>markdown</strong></p><pre><code class="markdown">[jsfiddle:key]
 [jsfiddle:key [tab] [skin] [height] [width]]
 </code></pre><p><strong>becomes</strong></p><p><iframe style="width:100%; height:300px" src="http://jsfiddle.net/ccWP7/embedded/js,resources,html,css,result/light/"></iframe></p><p><strong>탭 지정</strong></p><p><iframe style="width:100%; height:300px" src="http://jsfiddle.net/ccWP7/embedded/result,js,html,css/light/"></iframe></p><p><iframe style="width:100%; height:300px" src="http://jsfiddle.net/ccWP7/embedded/js,resources,html,css,result/presentation/"></iframe></p><p><iframe style="width:450px; height:300px" src="http://jsfiddle.net/ccWP7/embedded/js,resources,html,css,result/presentation/"></iframe></p>
-<h4 id="toc_198">tweet</h4>
+<h4 id="toc_204">tweet</h4>
 <p>트위터의 사용이 잦아지면서 포스팅에 트위터 내용을 첨부하고 싶은 경우가 자주 있다.  하루프레스는 트윗 <code>237213915593965568</code> 형태의 트윗 코드만 알면된다. 
 그리고 아래의 플러그인 코드를 이용해 포스팅에 트윗 내용을 첨부해보세요.</p><p><strong>markdown</strong></p><pre><code class="markdown">[tweet:<span class="number">237213915593965568</span>]
 </code></pre><p><strong>becomes</strong></p><p><blockquote class="twitter-tweet "><p> ^TS</p>&mdash; (@) <a href="https://twitter.com/twitterapi/status/237213915593965568" data-datetime=""></a></blockquote><div style="clear:both;"></div></p><p><strong>example</strong></p><pre><code class="markdown">[tweet:<span class="number">237213915593965568</span>]
 [tweet:<span class="number">237213915593965568</span> center]
 [tweet:<span class="number">237213915593965568</span> right]
 </code></pre><p><strong>왼쪽 정렬</strong></p><p><blockquote class="twitter-tweet "><p> ^TS</p>&mdash; (@) <a href="https://twitter.com/twitterapi/status/250113357066158080" data-datetime=""></a></blockquote><div style="clear:both;"></div></p><p><strong>가운데 정렬</strong></p><p><blockquote class="twitter-tweet tw-align-center"><p> ^TS</p>&mdash; (@) <a href="https://twitter.com/twitterapi/status/266928743946268674" data-datetime=""></a></blockquote><div style="clear:both;"></div></p><p><strong>오른쪽 정렬</strong></p><p><blockquote class="twitter-tweet tw-align-right"><p> ^TS</p>&mdash; (@) <a href="https://twitter.com/twitterapi/status/267593051986350080" data-datetime=""></a></blockquote><div style="clear:both;"></div></p>
-<h3 id="toc_199">gist</h3>
+<h3 id="toc_205">gist</h3>
 <p>Github.com 의 gist 를 블로그 포스팅에서 포함시킬 수 있는 플러그인입니다.</p>
 <ul>
 <li><a href="https://gist.github.com/4094468">https://gist.github.com/4094468</a></li>
 </ul>
 <p><strong>markdown</strong></p><pre><code class="markdown">[gist:<span class="number">4094468</span>]
 </code></pre><p><strong>become</strong></p><p><script src=https://gist.github.com/4094468.js?file=undefined></script><noscript><pre><code>#{code}</code></pre></noscript></p>
-<h3 id="toc_200">vimeo</h3>
+<h3 id="toc_206">vimeo</h3>
 <p><strong>markdown</strong></p><p><strong>become</strong>
 [vimeo:53157569]</p>
-<h3 id="toc_201">pdf</h3>
+<h3 id="toc_207">pdf</h3>
 <p><strong>pdf</strong></p><p><strong>become</strong>
 [pdf:clock.co.uk/downloads/ten-reasons-to-use-nodejs.pdf]</p>
                         </div>

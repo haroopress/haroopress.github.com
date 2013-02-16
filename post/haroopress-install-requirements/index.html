@@ -152,6 +152,11 @@
         <li class="nav-header">Recent Articles</li>
     
         <li>
+            <a href="/post/gravatar-image" target="_blank">gravatar image
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+        <li>
             <a href="/post/2013-haroopress-plan" target="_blank">2013 하루프레스 계획
             <span class="label">Rhio Kim</span></a>
         </li>
@@ -168,11 +173,6 @@
     
         <li>
             <a href="/post/haroopress-in-playnode-conference-2012" target="_blank">하루프레스 in #playnode conference 2012
-            <span class="label">Rhio Kim</span></a>
-        </li>
-    
-        <li>
-            <a href="/post/support-plugins" target="_blank">하루프레스 확장 마크다운
             <span class="label">Rhio Kim</span></a>
         </li>
     
@@ -198,9 +198,9 @@
 
                         <div class="markdown-wrapper">
                             <p>지난 10월 초 하루프레스 v0.9 버젼이 릴리즈 되고 나서 많은 분들이 하루프레스를 사용하고 있다. </p><p>오픈 소스이니 만큼 혼자서 많은 환경에서 테스트하기에는 쉽지가 않은 일이기에 작은 의견이라도 트위터나 Github 이슈트래커를 통해 주신분들께 깊은 감사를 전합니다.</p><p>특히 Ubutun 와 Mac OS X 에 깔끔한 설치를 위한 <code>h-get</code> 을 구현해 준 <a href="http://twitter.com/andrwj">@andrwj</a> 님에게 큰 감사함을 전합니다.</p><p><code>h-get</code> 은 몇가지 테스트를 거쳐 v0.9.3 에서 제공할 예정입니다. (현 v0.9.1)</p><p>많은 피드백 중 맥을 사용하고 있지만 쉘에 익숙하지 않고 Command line tool 을 설치하지 않은 사용자, Node 를 패키지로 설치하거나 소스 빌드한 분들의 권한 문제, 설치 시 필요한 모듈 빌드 문제와 의존성 문제 등으로 설치가 원할하지 않아 고생했다는 이야기가 가장 많았다.</p><p>그래서 이번 포스팅을 통해 관련한 많은 이슈들을 정리하고 설치 방법을 가이드하고자 한다.</p>
-<h2 id="toc_48">하루프레스 설치 요구사항</h2>
+<h2 id="toc_54">하루프레스 설치 요구사항</h2>
 
-<h3 id="toc_49">지원 운영체제</h3>
+<h3 id="toc_55">지원 운영체제</h3>
 
 <ul>
 <li><del>Window 7</del></li>
@@ -214,9 +214,9 @@
 </ul></li>
 </ul>
 
-<h3 id="toc_50">설치에 필요한 요구사항</h3>
+<h3 id="toc_56">설치에 필요한 요구사항</h3>
 
-<h4 id="toc_51">Git</h4>
+<h4 id="toc_57">Git</h4>
 
 <ul>
 <li><p>Ubuntu </p>
@@ -230,7 +230,7 @@
 <li><p>git 에 대한 자세한 사항은 <a href="http://git-scm.com/downloads">공식 사이트</a> 에서 확인하세요.</p></li>
 </ul>
 
-<h4 id="toc_52">Node.js</h4>
+<h4 id="toc_58">Node.js</h4>
 <p>노드의 경우 Github 저장소를 이용한 소스 빌드, 공식 사이트에서 pkg 파일을 다운로드 받아서 설치를 한 경우 노드의 권한이 user 권한이 아닌 시스템 권한을 갖기 때문에 하루프레스 설치와 동작에 있어 root 권한으로 실행해야 하는 불편함을 갖게 된다.</p><p>이런 경우 하루프레스를 저장소로 부터 clone 받은 직후 하루프레스 폴더의 owner 과 group 를 본인의 유저 권한에 맞게 설정을 변경해 주어야 한다.</p><pre><code class="">$ git clone https://github.com/rhiokim/haroopress myblog.com
 $ sudo chown -R <span class="tag">&lt;<span class="title">owner</span>&gt;</span> myblog.com   (<span class="tag">&lt;<span class="title">owner</span>&gt;</span> 을 본인의 값으로 설정)
 $ sudo chgrp -R <span class="tag">&lt;<span class="title">group</span>&gt;</span> myblog.com   (<span class="tag">&lt;<span class="title">group</span>&gt;</span> 을 본인의 그룹으로 설정)
@@ -256,7 +256,7 @@ $ nvm alias <span class="keyword">default</span> <span class="number">0.8</span>
 </ul></li>
 </ul>
 
-<h4 id="toc_53">커멘드라인 도구</h4>
+<h4 id="toc_59">커멘드라인 도구</h4>
 
 <ul>
 <li>Ubuntu</li>
@@ -275,7 +275,7 @@ $ nvm alias <span class="keyword">default</span> <span class="number">0.8</span>
 XCode 실행 &gt; Preferences &gt; Downloads &gt; Command Line Tools &gt; install
 <img src="./@img/cmd_tools.png" alt="image"></p></blockquote>
 
-<h4 id="toc_54"><del>java</del></h4>
+<h4 id="toc_60"><del>java</del></h4>
 <p><em class="label label-important"><strong>하루프레스 v0.9.2 에서 Java 의존성이 없어졌습니다.</strong></em></p>
 <ul>
 <li><del>Ubuntu</del></li>
@@ -295,7 +295,7 @@ XCode 실행 &gt; Preferences &gt; Downloads &gt; Command Line Tools &gt; instal
 <p><del>맥의 경우 JRE(Java Runtime Enviornment) 가 기본적으로 설치되어 있으나 최신 Mac OS 에서는 제외된다는 이야기가 있어, 설치되어 있지 않은 경우 <a href="http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1637588.html">Java SE Runtime Environment 7 Downloads</a> 에서 다운로드 받아 설치하면 된다.</del></p></blockquote>
 <p><del>자세한 설치 방법은 오라클 공식 메뉴얼 <a href="http://docs.oracle.com/javase/7/docs/webnotes/install/mac/mac-jre.html">JRE 7 Installation for Mac OS X</a> 을 확인하세요.</del></p></blockquote>
 
-<h4 id="toc_55"><del>python (<a href="http://www.python.org/download/">다운로드</a>)</del></h4>
+<h4 id="toc_61"><del>python (<a href="http://www.python.org/download/">다운로드</a>)</del></h4>
 <p><em class="label label-important"><strong>하루프레스 v0.9.3 에서 python 의존성이 없어졌습니다..</strong></em></p>
 <ul>
 <li><del>Ubuntu</del></li>
@@ -317,7 +317,7 @@ XCode 실행 &gt; Preferences &gt; Downloads &gt; Command Line Tools &gt; instal
 <li>Mac OS X 에서 brew 가 없거나 <a href="http://www.python.org/download/">패키지 설치</a>를 권장합니다.</li>
 </ul>
 
-<h4 id="toc_56">NPM 모듈 의존성</h4>
+<h4 id="toc_62">NPM 모듈 의존성</h4>
 
 <ul>
 <li>node-gyp
@@ -336,15 +336,15 @@ XCode 실행 &gt; Preferences &gt; Downloads &gt; Command Line Tools &gt; instal
 <li>node-gyp 에 대한 자세한 사항은 <a href="https://github.com/TooTallNate/node-gyp">저장소</a> 에서 확인하세요.</li>
 </ul>
 
-<h3 id="toc_57">커뮤니티 메뉴얼</h3>
+<h3 id="toc_63">커뮤니티 메뉴얼</h3>
 <p>하루프레스를 사용해 본 경험들을 찾는대로 아래 링크에 모아두고 있습니다.</p>
 <ul>
 <li><a href="http://haroopress.com/tutorial/">하루프레스 커뮤니티 레퍼런스 모음</a></li>
 </ul>
 
-<h1 id="toc_58"></h1>
+<h1 id="toc_64"></h1>
 
-<h3 id="toc_59">주말마다 코딩을하는 날 보고 평생애인이 했던 말</h3>
+<h3 id="toc_65">주말마다 코딩을하는 날 보고 평생애인이 했던 말</h3>
 <p>주말이 아니면 사실 코딩할 시간이 넉넉치 않기 때문에 늘 주말에 일찍 일어나 코딩을 하곤 한다. 그래서 주말마다 늦잠자는 평생 애인님께 무한한 감사를 한다.  </p><p>그런데 오늘은 일찍 일어나더니 나에게 주말마다 뭘 그렇게 하냐며...</p>
 <blockquote>
 <p>애인: 맨날 뭘 그렇게 해?</p><p>리오: 블로그 엔진 만들어</p><p>애인: 그걸 왜 해?</p><p>…</p><p>리오: 지금은 샤넬이 아니지만 열심히 만들면 샤넬처럼 가치가 있는 블로그 엔진이 될꺼니까.</p><p>애인: 놀구 있네. 계속 놀아. zz.zZ.Zzz</p></blockquote>

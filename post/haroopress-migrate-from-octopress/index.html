@@ -152,6 +152,11 @@
         <li class="nav-header">Recent Articles</li>
     
         <li>
+            <a href="/post/gravatar-image" target="_blank">gravatar image
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+        <li>
             <a href="/post/2013-haroopress-plan" target="_blank">2013 하루프레스 계획
             <span class="label">Rhio Kim</span></a>
         </li>
@@ -168,11 +173,6 @@
     
         <li>
             <a href="/post/haroopress-in-playnode-conference-2012" target="_blank">하루프레스 in #playnode conference 2012
-            <span class="label">Rhio Kim</span></a>
-        </li>
-    
-        <li>
-            <a href="/post/support-plugins" target="_blank">하루프레스 확장 마크다운
             <span class="label">Rhio Kim</span></a>
         </li>
     
@@ -199,7 +199,7 @@
                         <div class="markdown-wrapper">
                             <p>하루프레스는 향후 유명한 몇가지 블로그 엔진 데이터를 마이그레이션할 수 있도록 할 예정입니다.<br>
 구현 가능성을 판단하기 위해서 하루프레스의 유사품인 <a href="http://octopress.org">옥토프레스</a> 마이그레이션 기능이 탑재되어있습니다.</p><p><img src="./@img/octopress.png" alt=""></p><p>하루프레스의 대부분의 명령은 콘솔상에서 동작하도록 디자인되어 있다는 것을 알고 있으면 편리하게 이용할 수 있습니다. 어떤 기능들이 숨어있는지 보려면 <code>Makefile</code> 을 참고하시는 것도 좋습니다.</p>
-<h2 id="toc_60">기본 명령</h2>
+<h2 id="toc_66">기본 명령</h2>
 <p>가장 중요한 명령어는 <code>make octopress</code> 입니다. </p><pre><code class="">$ make octopress
 ========================================
 = convert from octopress
@@ -208,7 +208,7 @@ cd ./bin/convert/;./octopress.js
 
 Please! insert octopress article directory : <span class="tag">&lt;<span class="title">strong</span>&gt;</span>{octopress article directory}<span class="tag">&lt;/<span class="title">strong</span>&gt;</span>
 </code></pre>
-<h3 id="toc_61">옥토프레스 콘텐츠 폴더 지정하기</h3>
+<h3 id="toc_67">옥토프레스 콘텐츠 폴더 지정하기</h3>
 <p>명령어를 수행하면 옥토프레스의 콘텐츠 위치를 입력해 주어야 합니다.
 옥토프레스의 데이터는 기본적으로 <code>source/_post/*.markdown</code> 에 존재하기 때문에 절대 경로를 지정해주시면 됩니다.</p><p>결과적으로 <code>옥토프레스/source/_post/</code> 에 존재하는 모든 markdown 파일을 <code>하루프레스/source/data/articles</code> 디렉토리로 마이그레이션 됩니다.</p><p>실행결과</p><pre><code class=""><span class="comment">Please!</span> <span class="comment">insert</span> <span class="comment">octopress</span> <span class="comment">article</span> <span class="comment">directory</span> <span class="comment">:</span> <span class="comment">/path/to/octopress/source/_posts</span>
 <span class="comment">…</span>
@@ -220,7 +220,7 @@ Please! insert octopress article directory : <span class="tag">&lt;<span class="
 <span class="comment">…</span>
 <span class="comment">haroo</span>&gt; <span class="comment">jekyll</span> <span class="comment">convert</span> <span class="comment">to</span> <span class="comment">haroopress</span>
 </code></pre><p>위와 같이 옥토프레스 데이터를 마이그레이션을 진행합니다.   <code>jekyll convert to haroopress</code> 메세지가 표시되면 정상적으로 완료된 것입니다.</p>
-<h2 id="toc_62">동영상</h2>
+<h2 id="toc_68">동영상</h2>
 <p><iframe src="http://player.vimeo.com/video/45813575?color=ffffff" width="100%" height="550" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/45813575">haroopress deploy guide</a> from <a href="http://vimeo.com/rhio">rhiokim</a> on <a href="http://vimeo.com">Vimeo</a>.</p></p>
                         </div>
                         <hr />

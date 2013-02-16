@@ -152,6 +152,11 @@
         <li class="nav-header">Recent Articles</li>
     
         <li>
+            <a href="/post/gravatar-image" target="_blank">gravatar image
+            <span class="label">Rhio Kim</span></a>
+        </li>
+    
+        <li>
             <a href="/post/2013-haroopress-plan" target="_blank">2013 하루프레스 계획
             <span class="label">Rhio Kim</span></a>
         </li>
@@ -168,11 +173,6 @@
     
         <li>
             <a href="/post/haroopress-in-playnode-conference-2012" target="_blank">하루프레스 in #playnode conference 2012
-            <span class="label">Rhio Kim</span></a>
-        </li>
-    
-        <li>
-            <a href="/post/support-plugins" target="_blank">하루프레스 확장 마크다운
             <span class="label">Rhio Kim</span></a>
         </li>
     
@@ -198,14 +198,14 @@
 
                         <div class="markdown-wrapper">
                             <p>하루프레스 블로그의 로드맵을 소개합니다.</p>
-<h2 id="toc_141">v0.0.1</h2>
+<h2 id="toc_147">v0.0.1</h2>
 <p>하루프레스의 가장 중요한 것은 마크다운 포맷으로 포스팅을 할 수 있는 것과 정적 페이지를 생성하는 엔진이였습니다.  그래서 <code>v0.0.1</code> 버젼에서는 이에 필요한 기본 뼈대를 디자인하는 것에 목적을 두었습니다.</p>
 <ul>
 <li>markdown article module</li>
 <li>default blog structure</li>
 </ul>
 
-<h2 id="toc_142">v0.1.0</h2>
+<h2 id="toc_148">v0.1.0</h2>
 <p><code>v0.1.0</code> 버젼에서는 기본 뼈대에 더해질 플러그인의 구조를 설계하였습니다.  다양한 플러그인 들중에 댓글 시스템을 제공하는 disqus.com 플러그인을 제작하였고 소셜라이징을 위한 Facebook Like 버튼을 플러그인화 하였습니다.</p>
 <ul>
 <li>plugin structure
@@ -216,13 +216,13 @@
 </ul></li>
 </ul>
 
-<h2 id="toc_143">v0.2.0</h2>
+<h2 id="toc_149">v0.2.0</h2>
 <p><code>v0.2.0</code> 에서는 rss, atom 을 제공하기 위한 기능을 구현하였습니다.</p>
 <ul>
 <li>support feed.xml</li>
 </ul>
 
-<h2 id="toc_144">v0.3.0</h2>
+<h2 id="toc_150">v0.3.0</h2>
 <p>이 버젼에서는 기사를 성격에 맞게 분리하여 표시할 수 있는 구조를 설계하여 구현하였습니다.</p>
 <ul>
 <li>categorize</li>
@@ -230,19 +230,19 @@
 <li>date</li>
 </ul>
 
-<h2 id="toc_145">v0.4.0</h2>
+<h2 id="toc_151">v0.4.0</h2>
 <p>하루 프레스의 주된 기능인 정적 페이지 렌더링은 ejs 템플릿 엔진으로 되어있고 노드의 파일 시스템 API 를 이용해 정적 페이지를 생성합니다.</p>
 <ul>
 <li>static generator</li>
 </ul>
 
-<h2 id="toc_146">v0.5.0</h2>
+<h2 id="toc_152">v0.5.0</h2>
 <p>하루프레서는 기본적으로 Github 의 정적 페이지 서비스에 포커싱되어 구현되었습니다.  <code>v0.5.0</code> 에서는 Github 에 손쉽게 퍼블리싱 할 수 있도록 자동화합니다.</p>
 <ul>
 <li>gh-page auto publisher module</li>
 </ul>
 
-<h2 id="toc_147">v0.5.1 (hackathon issue)</h2>
+<h2 id="toc_153">v0.5.1 (hackathon issue)</h2>
 <p><code>v0.5.1</code> 은 FRENDS Hackathon 2012 에 참가하면서 구현한 기능들로 Make 스크립트를 작성하여 터미널에서 하루프레스를 좀더 쉽게 사용할 수 있는 도구들을 개발하였습니다.</p>
 <ul>
 <li><del>git clone</del></li>
@@ -254,7 +254,7 @@
 <li>make deploy ( git add . &amp;&amp; git commit -m &#39;new Date()&#39; &amp;&amp; git push origin )</li>
 </ul>
 
-<h2 id="toc_148">v0.6.0</h2>
+<h2 id="toc_154">v0.6.0</h2>
 <p><code>v0.2.0</code> 에서 구현한 플러그인 구조에 좀더 다양한 플러그인들을 구현해 하루프레스에 포함시켰습니다.</p>
 <ul>
 <li>support other plugins
@@ -268,44 +268,44 @@
 </ul></li>
 </ul>
 
-<h2 id="toc_149">v0.7.0</h2>
+<h2 id="toc_155">v0.7.0</h2>
 <p>이 버젼에서는 블로그가 아닌 페이지 단위의 블로그를 작성하기 위해 만들어졌습니다.</p>
 <ul>
 <li>page generator</li>
 <li><del>sharethis.com plugin : <a href="http://sharethis.com/">http://sharethis.com/</a></del></li>
 </ul>
 
-<h2 id="toc_150">v0.8.0</h2>
+<h2 id="toc_156">v0.8.0</h2>
 <p><code>v0.8.0</code> 에서는 굉장히 많은 이슈들을 처리하였고 테마 기능을 위한 구조 설게 및 구현을 하였습니다.</p>
 <ul>
 <li>theme</li>
 </ul>
 
-<h3 id="toc_151">v0.8.1</h3>
+<h3 id="toc_157">v0.8.1</h3>
 <p>이 버젼에서는 CLI 를 Make 스크립트에서 노드로 컨버팅합니다. 이는 크로스 플랫폼에서 동일한 CLI 를 사용할 수 있도록 하기 위한 준비 단계입니다.</p>
-<h4 id="toc_152">v0.8.2</h4>
+<h4 id="toc_158">v0.8.2</h4>
 <p>이 버젼에서는</p>
-<h2 id="toc_153">v0.9.0</h2>
+<h2 id="toc_159">v0.9.0</h2>
 
 <ul>
 <li>cloud</li>
 </ul>
 
-<h2 id="toc_154">v0.10.0</h2>
+<h2 id="toc_160">v0.10.0</h2>
 
 <ul>
 <li>text, photo, video, audio</li>
 </ul>
 
-<h2 id="toc_155">v0.11.0</h2>
+<h2 id="toc_161">v0.11.0</h2>
 
 <ul>
 <li>documentation</li>
 </ul>
 
-<h2 id="toc_156">v1.0.0</h2>
+<h2 id="toc_162">v1.0.0</h2>
 
-<h2 id="toc_157">backlog</h2>
+<h2 id="toc_163">backlog</h2>
 <p>백 로그에는 하루프레스에 추가될 다양한 아이디어나 중요도와 우선순위를 지정하기 어려운 작업과 이슈들을 관리합니다.</p>
 <ul>
 <li>{stats: draft} documents publish manager</li>
